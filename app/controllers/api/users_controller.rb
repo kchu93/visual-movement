@@ -23,10 +23,12 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = selected_user
+    render json: @user
   end
 
   def index
     @users = User.all
+    render json: @users
   end
 
   def destroy

@@ -12,6 +12,10 @@ class Signup extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
   handleInput(type){
     return (e) => {
       this.setState({[type]: e.target.value});
@@ -23,11 +27,25 @@ class Signup extends React.Component {
     this.props.createNewUser(this.state).then(() => this.props.history.push("/"));
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors ? this.props.errors.map((error,i) => (
+          <div key={`error-${i}`}>
+            {error}
+          </div>
+        )) : ""}
+      </ul>
+    );
+  }
+
+
   render () {
     return (
       <div className="session-form">
         <h2>Sign Up!</h2>
-        <form>
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
+          {this.renderErrors()}
           <label>Username:
             <input
               type="text"
@@ -52,7 +70,7 @@ class Signup extends React.Component {
               />
           </label>
 
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <input type="submit" value="Sign Up" />
         </form>
       </div>
     );

@@ -1,0 +1,22 @@
+@import "variables";
+
+
+.logo {
+  font-size: .875rem;
+}
+
+.nav-bar {
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+  display: flex;
+  justify-content: space-between;
+  background: $white;
+  overflow: auto;
+}
+
+
+.btn {
+  margin-right: 10px;
+  font-size: .875rem;
+  text-align: center;
+}

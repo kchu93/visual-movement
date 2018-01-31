@@ -6,6 +6,7 @@ export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
 
+
 const receiveCurrentUser = user => ({
   type: RECEIVE_CURRENT_USER,
   user
@@ -20,6 +21,10 @@ const receiveErrors = errors => ({
   errors
 });
 
+
+export const clearErrors =  () => dispatch => (
+   dispatch(receiveErrors([]))
+);
 
 export const createNewUser = formUser => dispatch => (
   APIUtil.postUser(formUser).then(user => dispatch(receiveCurrentUser(user)), err=> (dispatch(receiveErrors(err.responseJSON))

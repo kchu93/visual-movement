@@ -10,13 +10,15 @@ export const NavBar = ({currentUser, logout }) => {
   ) : (
     <div>
       <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to="/login">Log In</Link>
+      <Link className="btn" to="/login">Sign In</Link>
     </div>
   );
 
   return (
     <header className="nav-bar">
-      <h1 className="logo"> Visual Movement</h1>
+      <h1 className="logo">
+        <Link to="/">Visual Movement</Link>
+      </h1>
       <div>
         {display}
       </div>

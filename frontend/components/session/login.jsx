@@ -13,20 +13,39 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
   handleInput(type) {
     return (e) => this.setState({[type]: e.target.value});
   }
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.login(this.state).then(() => this.props.history.push("/"));
+    (this.props.login(this.state).then(() =>
+      (this.props.params.path !== "/") ? this.props.history.push("/") : undefined
+    ));
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors ? this.props.errors.map((error,i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        )) : ""}
+      </ul>
+    );
   }
 
   render (){
     return (
       <div className="session-form">
-        <h2>Login!</h2>
-        <form>
+        <h2>Sign In</h2>
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+          {this.renderErrors()}
           <label>Username:
             <input
               type="text"
@@ -43,7 +62,7 @@ class Login extends React.Component {
               />
           </label>
 
-          <button onClick={this.handleSubmit}>Log In</button>
+          <input type="submit" value="submit" />
         </form>
       </div>
     );

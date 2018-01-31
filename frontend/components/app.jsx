@@ -9,11 +9,12 @@ import {
   Redirect,
   Switch
  } from 'react-router-dom';
+ import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 export default () => (
   <div>
     <Route path="/" component={NavBarContainer} />
-    <Route path="/login" component={LoginContainer} />
-    <Route path="/signup" component={SignupContainer} />
+    <AuthRoute path="/login" component={LoginContainer} />
+    <AuthRoute path="/signup" component={SignupContainer} />
   </div>
 );

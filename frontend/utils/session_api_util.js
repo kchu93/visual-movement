@@ -1,7 +1,14 @@
+export const fetchUsers = () => (
+  $.ajax({
+    method: "GET",
+    url: '/api/users'
+  })
+);
+
 export const postUser = user => (
   $.ajax({
     method: 'POST',
-    url: '/api/user',
+    url: '/api/users',
     data: {user}
   })
 );
