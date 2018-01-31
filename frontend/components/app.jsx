@@ -1,23 +1,19 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
+import LoginContainer from './session/login_container';
 import {
   Route,
   Link,
   Redirect,
-  Switch,
-  HashRouter
+  Switch
  } from 'react-router-dom';
 
 export default () => (
   <div>
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Visual Movement</h1>
-      </Link>
-    </header>
-    <Switch>
-      <Route path="/signup" component={SignupContainer} />
-    </Switch>
+    <Route path="/" component={NavBarContainer} />
+    <Route path="/login" component={LoginContainer} />
+    <Route path="/signup" component={SignupContainer} />
   </div>
 );
