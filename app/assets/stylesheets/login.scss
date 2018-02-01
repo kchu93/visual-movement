@@ -55,14 +55,28 @@
   color: $darkgold;
   padding: 12px;
   letter-spacing: 2px;
+  margin-right: 25px;
+
+  &:hover {
+    color: $lightgrey;
+    background: $darkgold;
+    opacity: .75;
+  }
 }
 
 .demo-btn {
-  background: $lightgrey;
+  background: $darkgold;
+  opacity: .75;
   border: none;
-  color: $darkgold;
+  color: $lightgrey;
   padding: 12px;
   min-width: 78.55px;
   min-height: 38.8px;
   letter-spacing: 2px;
+  margin-left: 25px;
+  &:hover {
+    color: $darkgold;
+    background: $lightgrey;
+    opacity: 1;
+  }
 }

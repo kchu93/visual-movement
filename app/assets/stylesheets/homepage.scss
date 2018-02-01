@@ -1,0 +1,49 @@
+.HomePage {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.section1 {
+  background: white;
+  height: 100%;
+  width: 50%;
+
+}
+
+.section1-link {
+  background-image: asset-url('bamboowhite.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  min-height: 500px;
+  overflow: hidden;
+  opacity: .95;
+}
+
+.section1-link:hover{
+    background-image: asset-url('bambooblack.png');
+}
+
+.section2-link {
+  background: white;
+  background-image: asset-url('rightsideblack.png');
+  background-size: contain;
+  // background-repeat: no-repeat;
+  position: absolute;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  max-width: 687.2px;
+  min-height: 250px;
+  left: 50%;
+  box-sizing: border-box;
+  opacity: .95;
+}
+
+.section2-link:hover {
+  background-image: asset-url('rightsidewhite.png');
+}

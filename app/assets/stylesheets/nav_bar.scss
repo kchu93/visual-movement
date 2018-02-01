@@ -2,7 +2,7 @@
 
 
 .logo-container {
-  font-size: .875rem;
+  font-size: 14px;
   font-family: 'Didact Gothic';
 }
 
@@ -12,7 +12,7 @@
 
 .nav-bar {
   box-sizing: border-box;
-  padding: 1.875rem;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   background: $white;
@@ -23,20 +23,38 @@
 
 .btn {
   font-family: 'Montserrat';
-  margin-right: 10px;
+  margin-right: 12px;
+  margin-left: 12px;
   font-size: 11px;
   text-align: center;
 }
 
-.user-logged-in {
+.logout-btn {
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  padding: 0;
+  box-sizing: border-box;
+  width: 80px;
+  height: 25px;
+  margin-left: 20px;
+  font-size: 11px;
+  background: none;
+  border: 1px solid black;
+}
+
+.currentUser {
+  font-family: 'Montserrat';
+  font-size: 11px;
+  min-width: 80px;
+  min-height: 25px;
+  width: auto;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 25px;
+  padding: 0;
+}
+
+.user-logged-in{
   display: flex;
   justify-content: center;
-}
-
-.user-logged-in h3 {
-  margin-right: 10px;
-}
-
-.user-logged-in button {
-  margin-right: 10px;
 }

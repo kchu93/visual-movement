@@ -3,6 +3,8 @@ import {Provider} from 'react-redux';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
+import HomePage from './homepage/homepage';
+// import Footer from './footer/footer';
 import {
   Route,
   Link,
@@ -13,8 +15,11 @@ import {
 
 export default () => (
   <div>
-    <Route path="/" component={NavBarContainer} />
-    <AuthRoute path="/login" component={LoginContainer} />
-    <AuthRoute path="/signup" component={SignupContainer} />
+    <NavBarContainer />
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <AuthRoute path="/login" component={LoginContainer} />
+      <AuthRoute path="/signup" component={SignupContainer} />
+    </Switch>
   </div>
 );

@@ -18,7 +18,13 @@
   border: none;
   color: $darkgold;
   padding: 12px;
+  margin-top: 15px;
   letter-spacing: 2px;
+    &:hover {
+      color: $lightgrey;
+      background: $darkgold;
+      opacity: 1;
+    }
 }
 
 .signin-input {

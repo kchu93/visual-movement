@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export const NavBar = ({currentUser, logout }) => {
   const display = currentUser ? (
     <div className="user-logged-in">
-      <h3>{currentUser.username}</h3>
-      <button className="btn" onClick={logout}>Logout</button>
+      <h3 className="currentUser">{currentUser.username}</h3>
+      <button className="logout-btn" onClick={logout}>LOGOUT</button>
     </div>
   ) : (
     <div>
