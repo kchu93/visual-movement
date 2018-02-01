@@ -31,7 +31,9 @@ class Signup extends React.Component {
     return (
       <ul>
         {this.props.errors ? this.props.errors.map((error,i) => (
-          <div key={`error-${i}`}>
+          <div
+            className="error-text-signup"
+            key={`error-${i}`}>
             {error}
           </div>
         )) : ""}
@@ -43,34 +45,41 @@ class Signup extends React.Component {
   render () {
     return (
       <div className="session-form">
-        <h2>Sign Up!</h2>
+        <h2 className="header-signup">SIGN UP</h2>
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           {this.renderErrors()}
-          <label>Username:
+          <br/>
+          <label>
             <input
+              className="signin-input"
+              placeholder="Username"
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
               />
           </label>
-
-          <label>Email:
+          <br/>
+          <label>
             <input
+              className="signin-input"
+              placeholder="Email"
               type="text"
               value={this.state.email}
               onChange={this.handleInput('email')}
               />
           </label>
-
-          <label>Password:
+          <br/>
+          <label>
             <input
+              placeholder="Password"
+              className="signin-input"
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />
           </label>
-
-          <input type="submit" value="Sign Up" />
+          <br/>
+          <input className="signin-btn" type="submit" value="SIGN UP" />
         </form>
       </div>
     );

@@ -1,22 +1,42 @@
 @import "variables";
 
 
-.logo {
+.logo-container {
   font-size: .875rem;
+  font-family: 'Didact Gothic';
+}
+
+.logo-text {
+  font-weight: bolder;
 }
 
 .nav-bar {
-  padding-right: 1.875rem;
-  padding-left: 1.875rem;
+  box-sizing: border-box;
+  padding: 1.875rem;
   display: flex;
   justify-content: space-between;
   background: $white;
-  overflow: auto;
+  height: 100%;
+  position: relative;
 }
 
 
 .btn {
+  font-family: 'Montserrat';
   margin-right: 10px;
-  font-size: .875rem;
+  font-size: 11px;
   text-align: center;
+}
+
+.user-logged-in {
+  display: flex;
+  justify-content: center;
+}
+
+.user-logged-in h3 {
+  margin-right: 10px;
+}
+
+.user-logged-in button {
+  margin-right: 10px;
 }

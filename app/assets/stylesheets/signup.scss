@@ -1,0 +1,35 @@
+@import 'variables';
+
+.header-signup {
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.error-text-signup{
+  color: $errorred;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 6px;
+}
+
+.signin-btn {
+  background: $lightgrey;
+  border: none;
+  color: $darkgold;
+  padding: 12px;
+  letter-spacing: 2px;
+}
+
+.signin-input {
+  border: none;
+  border-bottom: 1px solid $lightergrey;
+  padding: 10px;
+  width: 75%;
+
+  &::placeholder {
+    color: black;
+    opacity: .5;
+    letter-spacing: 2px;
+  }
+}

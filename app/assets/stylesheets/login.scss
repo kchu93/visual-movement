@@ -1,0 +1,68 @@
+@import 'variables';
+
+
+.session-form {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  max-width: 340px;
+  transform: translate(-50%, -50%);
+  background: $white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header-sign{
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.error-text {
+  color: $errorred;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+
+
+.login-input {
+  border: none;
+  border-bottom: 1px solid $lightergrey;
+  padding: 10px;
+  width: 75%;
+
+  &::placeholder {
+    color: black;
+    opacity: .5;
+    letter-spacing: 2px;
+  }
+}
+
+.login-btn-container {
+  display:flex;
+  justify-content: space-around;
+}
+
+
+.login-btn {
+  background: $lightgrey;
+  border: none;
+  color: $darkgold;
+  padding: 12px;
+  letter-spacing: 2px;
+}
+
+.demo-btn {
+  background: $lightgrey;
+  border: none;
+  color: $darkgold;
+  padding: 12px;
+  min-width: 78.55px;
+  min-height: 38.8px;
+  letter-spacing: 2px;
+}
