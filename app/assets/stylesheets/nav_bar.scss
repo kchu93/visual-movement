@@ -50,7 +50,8 @@
   height: 25px;
   font-size: 12px;
   background: none;
-  border: 1px solid black;
+  border: .0625rem solid;
+  border-radius: .125rem;
 
   &:hover {
     color: $darkgold;
