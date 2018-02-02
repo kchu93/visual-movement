@@ -8,7 +8,7 @@ export const NavBar = ({currentUser, logout }) => {
       <button className="logout-btn" onClick={logout}>LOGOUT</button>
     </div>
   ) : (
-    <div>
+    <div className="left-side-buttons">
       <Link className="btn" to="/signup">SIGN UP</Link>
       <Link className="btn" to="/login">SIGN IN</Link>
     </div>
@@ -17,7 +17,7 @@ export const NavBar = ({currentUser, logout }) => {
   return (
     <header className="nav-bar">
       <h1 className="logo-container">
-        <Link className="logo-text" to="/">Visual Movement</Link>
+        <Link className="logo-text" to="/"><img src="https://i.imgur.com/YZNoZhp.png"></img></Link>
       </h1>
       <div className="left-content">
         {display}

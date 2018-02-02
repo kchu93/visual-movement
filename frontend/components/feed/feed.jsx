@@ -12,19 +12,19 @@ class Feed extends React.Component {
 
   render (){
     return (
-      <div className="feed-container">
+      <div>
         <h1 className="feed-header"></h1>
-        <div className="image-container">
+        <ul className="feed-container">
           {
 
             this.props.images.map(image => (
-          <div>
-            <img className="feed-images" src={image.image_url}/>
-            <a className="username" href="#">{image.username}</a>
-          </div>
+              <li className="feed-images">
+                <a href="#"><img src={image.image_url} /></a>
+                <a className="username" href="#">{image.username}</a>
+              </li>
             ))
           }
-        </div>
+      </ul>
       </div>
     );
   }

@@ -1,17 +1,29 @@
 @import "variables";
 
 
-.image-container {
-  position: absolute;
-}
-
-.feed-header {
-  background-position: center;
+.feed-container {
+  padding-left: 4%;
+  list-style: none;
 }
 
 .feed-images {
-  width: 20vw;
-  height: auto;
-  padding: 10px;
-  background-position: center;
+  width: 25%;
+  vertical-align: bottom;
+  display: inline-block;
+  padding: 3%;
+}
+
+.feed-images img{
+  width: 25vw;
+}
+
+.username {
+  display: block;
+  font-size: 14px;
+  color: rgb(136, 136, 136);
+  padding-top: 10px;
+
+  &:hover {
+    color: $darkgold;
+  }
 }

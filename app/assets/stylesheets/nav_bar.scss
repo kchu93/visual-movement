@@ -4,10 +4,14 @@
 .logo-container {
   font-size: 14px;
   font-family: 'Arial';
+  align-items: center;
 }
 
-.logo-text {
-  font-weight: bolder;
+
+.logo-text img {
+  width: 20%;
+  margin:auto;
+  text-align: center;
 }
 
 .nav-bar {
@@ -25,8 +29,16 @@
   font-family: 'Arial';
   margin-right: 12px;
   margin-left: 12px;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
+  padding-top: 8px;
+
+}
+
+.left-side-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 }
 
 .logout-btn {
@@ -37,14 +49,15 @@
   width: 80px;
   height: 25px;
   margin-left: 20px;
-  font-size: 11px;
+  font-size: 12px;
   background: none;
   border: 1px solid black;
 }
 
 .currentUser {
   font-family: 'Arial';
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: bold;
   min-width: 80px;
   min-height: 25px;
   width: auto;
@@ -56,5 +69,11 @@
 
 .user-logged-in{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.left-content {
+  width: 50%;
+  text-align: right;
 }
