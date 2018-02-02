@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import createStore from './store/store';
 import Root from './components/root';
-import { fetchImages } from './utils/image_api_util';
+import { fetchUser } from './utils/session_api_util';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -19,4 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-window.fetchImages = fetchImages;
+window.fetchUser = fetchUser;

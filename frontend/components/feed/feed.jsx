@@ -18,7 +18,7 @@ class Feed extends React.Component {
           {
 
             this.props.images.map(image => (
-              <li className="feed-images">
+              <li key={image.id} className="feed-images">
                 <a href="#"><img src={image.image_url} /></a>
                 <a className="username" href="#">{image.username}</a>
               </li>

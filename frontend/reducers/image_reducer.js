@@ -5,6 +5,7 @@ import {
   REMOVE_IMAGE
 } from '../actions/image_actions';
 
+import { RECEIVE_USER } from '../actions/user_actions';
 
 export const imageReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -16,6 +17,10 @@ export const imageReducer = (state = {}, action) => {
 
     case RECEIVE_IMAGE:
       return merge({}, state, {[action.image.id]: action.image});
+
+    case RECEIVE_USER:
+      const images = action.user.images;
+      return merge({}, state, images);
 
     case REMOVE_IMAGE:
       delete newState[action.imageId];

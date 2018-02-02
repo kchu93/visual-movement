@@ -5,6 +5,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import HomePage from './homepage/homepage';
 import FeedContainer from './feed/feed_container';
+import ProfileContainer from './profile/profile_container';
 // import Footer from './footer/footer';
 import {
   Route,
@@ -19,6 +20,7 @@ export default () => (
     <NavBarContainer />
     <Switch>
       <AuthRoute exact path="/" component={HomePage} />
+      <Route path="/users/:userId" component={ProfileContainer} />
       <AuthRoute path="/login" component={LoginContainer} />
       <AuthRoute path="/signup" component={SignupContainer} />
       <ProtectedRoute path="/feed" component={FeedContainer} />

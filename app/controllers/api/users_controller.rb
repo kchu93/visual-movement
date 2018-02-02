@@ -23,7 +23,11 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = selected_user
-    render json: @user
+    if @user
+      render 'api/users/show'
+    else
+      render json: @user.errors.full_messages, status: 404
+    end
   end
 
   def index
