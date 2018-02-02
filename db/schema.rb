@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20180201191801) do
 
   create_table "images", force: :cascade do |t|
     t.string "image_url", null: false
-    t.string "author_id", null: false
+    t.integer "author_id", null: false
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_images_on_author_id", unique: true
-    t.index ["image_url"], name: "index_images_on_image_url"
+    t.index ["author_id"], name: "index_images_on_author_id"
+    t.index ["image_url"], name: "index_images_on_image_url", unique: true
   end
 
   create_table "users", force: :cascade do |t|

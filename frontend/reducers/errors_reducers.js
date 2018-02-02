@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux';
 import { sessionErrorReducer }  from './session_errors_reducer';
 
+import { imageErrorsReducer } from './image_errors_reducer';
+
 export default combineReducers({
-  session: sessionErrorReducer
+  session: sessionErrorReducer,
+  images: imageErrorsReducer
 });
