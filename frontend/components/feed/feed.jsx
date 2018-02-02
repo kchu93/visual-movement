@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Feed extends React.Component {
   constructor(props){
     super(props);
@@ -17,8 +18,10 @@ class Feed extends React.Component {
           {
 
             this.props.images.map(image => (
-              <img className="feed-images" src={image.image_url}/>
-              
+          <div>
+            <img className="feed-images" src={image.image_url}/>
+            <a className="username" href="#">{image.username}</a>
+          </div>
             ))
           }
         </div>
