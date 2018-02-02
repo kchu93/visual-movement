@@ -10,14 +10,15 @@ class Feed extends React.Component {
   }
 
   render (){
-    console.log(this.props);
     return (
-      <div>
-        <h1>Feed</h1>
-        <div>
+      <div className="feed-container">
+        <h1 className="feed-header"></h1>
+        <div className="image-container">
           {
+
             this.props.images.map(image => (
               <img className="feed-images" src={image.image_url}/>
+              
             ))
           }
         </div>

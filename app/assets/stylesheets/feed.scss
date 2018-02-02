@@ -1,4 +1,17 @@
+@import "variables";
+
+
+.image-container {
+  position: absolute;
+}
+
+.feed-header {
+  background-position: center;
+}
+
 .feed-images {
-  width: 30vw;
+  width: 20vw;
   height: auto;
+  padding: 10px;
+  background-position: center;
 }
