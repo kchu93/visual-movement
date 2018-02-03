@@ -5,10 +5,11 @@ export const RECEIVE_USER_ERRORS = "RECEIVE_USER_ERRORS";
 
 
 
-export const receiveUser = user => {
+export const receiveUser = ({ user, images }) => {
   return ({
     type: RECEIVE_USER,
-    user
+    user,
+    images
   });
 };
 

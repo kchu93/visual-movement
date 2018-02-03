@@ -21,10 +21,6 @@ export const sessionReducer = (state = _nullSession, action) => {
       const currentUser = action.user;
       return merge({}, {currentUser});
 
-    // case RECEIVE_USER:
-    //   const user = action.user;
-    //   return merge({}, {user});
-
     case LOGOUT_CURRENT_USER:
       return _nullSession;
 
