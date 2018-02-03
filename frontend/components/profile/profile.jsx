@@ -5,7 +5,6 @@ class Profile extends React.Component {
     super(props);
   }
 
-
   componentWillMount(){
     if (this.props.match.params.userId) {
       this.props.fetchUser(this.props.match.params.userId);
