@@ -24,13 +24,13 @@ class Profile extends React.Component {
       <div className="Profile">
 
         <div className="profile-info-container">
-          <img src={this.props.user.profile_picture} />
-          <h1 className="profile-header">{this.props.user.username}</h1>
+          <img className="profile_picture" src={this.props.user.profile_picture} />
+          <h1 className="profile-name">{this.props.user.username}</h1>
           <div className="profile-space"></div>
           <button className="follow-button">FOLLOW</button>
         </div>
 
-        <ul className="profile-container">
+        <ul className="profile-images-container">
           {
             this.props.images.map(image => (
             <li key={image.id} className="profile-images">

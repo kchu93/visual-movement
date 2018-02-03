@@ -13,7 +13,6 @@ class NavBar extends React.Component {
 
 
   render () {
-    console.log(this.props);
     const display = this.props.currentUser ? (
       <div className="user-logged-in">
         <Link to="/feed" className="navbarfeed">FEED</Link>

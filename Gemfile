@@ -40,6 +40,11 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry-rails'
   gem 'binding_of_caller'
+  
+  gem 'guard', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
 end
 
 group :development do
