@@ -3,11 +3,8 @@ class Api::FollowsController < ApplicationController
   before_action :ensure_sign_in, only: [:create, :destroy]
 
   def create
+    @follow = Follow.new(follower_id: current_user.id, followee_id: params[:followee_id])
 
-    # @follow = Follow.new(follow_params)
-    # @follow.follower_id = current_user.id
-
-    @follow = current_user.follows.new(follow_params)
     if @follow.save
       render :show
     else
@@ -16,11 +13,10 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @follow = current_user.follows.find_by(id: params[:id])
-
+    @follow = Follow.find_by(id: params[:id])
     if @follow
-      @follow.delete!
-      render '/users/show'
+      @follow.delete
+      render :show
     else
       render json: @follow.errors.full_messages, status: 401
     end

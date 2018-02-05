@@ -3,7 +3,7 @@
 
 .logo-container {
   font-size: 14px;
-  font-family: 'Arial';
+  font-family: 'Lato';
   align-items: center;
 }
 
@@ -16,7 +16,7 @@
 
 .nav-bar {
   box-sizing: border-box;
-  padding: 30px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   background: $white;
@@ -26,7 +26,7 @@
 
 
 .btn {
-  font-family: 'Arial';
+  font-family: 'Lato';
   margin-right: 12px;
   margin-left: 12px;
   font-size: 12px;
@@ -42,7 +42,7 @@
 }
 
 .logout-btn {
-  font-family: 'Arial';
+  font-family: 'Lato';
   font-weight: bolder;
   padding: 0;
   box-sizing: border-box;
@@ -60,7 +60,7 @@
 }
 
 .currentUser {
-  font-family: 'Arial';
+  font-family: 'Lato';
   font-size: 12px;
   font-weight: bold;
   min-width: 80px;
@@ -78,7 +78,7 @@
 }
 
 .navbarfeed {
-  font-family: 'Arial';
+  font-family: 'Lato';
   font-size: 12px;
   font-weight: bold;
   min-width: 80px;

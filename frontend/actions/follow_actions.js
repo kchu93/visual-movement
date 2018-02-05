@@ -10,9 +10,9 @@ export const receiveFollow = follow => ({
   follow
 });
 
-export const removeFollow = follow => ({
+export const removeFollow = followId => ({
   type: REMOVE_FOLOW,
-  follow
+  followId
 });
 
 export const receiveFollowErrors = follow => ({
@@ -21,11 +21,10 @@ export const receiveFollowErrors = follow => ({
 });
 
 
-
-export const followUser = (follow) => dispatch => (
-  APIUtil.createFollow(follow).then(user => dispatch(receiveFollow(user)), err => (dispatch(receiveFollowErrors(err.responseJSON))))
+export const createFollow = (followee_id) => dispatch => (
+  APIUtil.createFollow(followee_id).then(follow => dispatch(receiveFollow(follow)), err => (dispatch(receiveFollowErrors(err.responseJSON))))
 );
 
-export const unfollowUser = follow => dispatch => (
-  APIUtil.deleteFollow(follow).then(user => dispatch(removeFollow(user)), err => (dispatch(receiveFollowErrors(err.responseJSON))))
+export const deleteFollow = followId => dispatch => (
+  APIUtil.deleteFollow(followId).then(follow => dispatch(removeFollow(follow)), err => (dispatch(receiveFollowErrors(err.responseJSON))))
 );

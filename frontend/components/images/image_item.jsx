@@ -19,15 +19,35 @@ class ImageItems extends React.Component {
     }
   }
 
+  dateConversion(){
+    console.log(this.props.image.created_at);
+    let timestamp = new Date(this.props.image.created_at);
+    let locale = "en-us";
+
+    let month = timestamp.toLocaleString(locale, { month: "long" });
+    let day = timestamp.getDay();
+    let year = timestamp.getFullYear();
+
+    let fulldate = month + " " + day + ", " + year;
+    let time = timestamp.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+    return fulldate + "  " + time;
+  }
+
 
   render (){
+    console.log(this.props);
     if (!this.props.image){
       return null;
     }
     return (
       <div>
-        <div>
-          <img src={this.props.image.image_url}/>
+        <div className="image-item-image-container">
+          <img className="image-item"src={this.props.image.image_url}/>
+        <div className="image-item-details-container">
+          <h1>{this.props.image.username}</h1>
+        <h1 className="image-item-date">{this.dateConversion()}</h1>
+        </div>
         </div>
       </div>
     );

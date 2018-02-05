@@ -38,7 +38,7 @@ class Profile extends React.Component {
             this.props.images.map(image => (
             <li key={image.id} className="profile-images">
               <Link to={`/images/${image.id}`}>
-                <img className="full-image" src={image.image_url} />
+                <img src={image.image_url} />
               </Link>
             </li>
             ))

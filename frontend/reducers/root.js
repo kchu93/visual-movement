@@ -3,10 +3,12 @@ import { sessionReducer } from './session_reducer';
 import errorsReducer from './errors_reducers';
 import { imageReducer } from './image_reducer';
 import { userReducer } from './user_reducer';
+import { followReducer } from './follow_reducer';
 
 export default combineReducers({
   session: sessionReducer,
+  user: userReducer,
   images: imageReducer,
-  errors: errorsReducer,
-  user: userReducer
+  follows: followReducer,
+  errors: errorsReducer
 });
