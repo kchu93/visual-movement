@@ -3,9 +3,13 @@ import merge from 'lodash/merge';
 import {
   RECEIVE_CURRENT_USER,
   LOGOUT_CURRENT_USER,
-  RECEIVE_USER,
   RECEIVE_USERS
 } from '../actions/session_actions';
+
+import {
+  RECEIVE_FOLLOW,
+  REMOVE_FOLOW
+} from '../actions/user_actions';
 
 
 const _nullSession = Object.freeze({

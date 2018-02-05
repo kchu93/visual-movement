@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'rails_12factor'
+gem 'paperclip'
+gem 'aws-sdk'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -40,7 +42,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry-rails'
   gem 'binding_of_caller'
-  
+
   gem 'guard', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'

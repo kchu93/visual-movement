@@ -5,7 +5,7 @@ end
 json.images do
   @user.images.each do |image|
     json.set! image.id do
-      json.extract! image, :image_url
+      json.extract! image, :image_url, :id
     end
   end
 end

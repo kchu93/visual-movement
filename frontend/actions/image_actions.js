@@ -35,7 +35,6 @@ export const fetchImages = () => dispatch => (
 );
 
 
-
 export const fetchImage = formImage => dispatch => (
   APIUtil.fetchImage(formImage).then(image => dispatch(receiveImage(image)), err => (dispatch(receiveImageErrors(err.responseJSON))
   ))

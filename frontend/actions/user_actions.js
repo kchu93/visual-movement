@@ -1,7 +1,8 @@
-import * as APIUtil from '../utils/session_api_util';
+import * as APIUtil from '../utils/users_api_util.js';
 
 export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_USER_ERRORS = "RECEIVE_USER_ERRORS";
+
 
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props){
@@ -19,6 +20,9 @@ class Profile extends React.Component {
 
 
   render () {
+    if (!this.props.images){
+      return null;
+    }
     return (
       <div className="Profile">
 
@@ -33,7 +37,9 @@ class Profile extends React.Component {
           {
             this.props.images.map(image => (
             <li key={image.id} className="profile-images">
-              <a href="#"><img src={image.image_url} /></a>
+              <Link to={`/images/${image.id}`}>
+                <img className="full-image" src={image.image_url} />
+              </Link>
             </li>
             ))
           }
