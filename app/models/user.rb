@@ -11,24 +11,23 @@ class User < ApplicationRecord
     class_name: 'Image'
 
 
-  has_many :follows,
+  has_many :relationships_where_user_is_follower,
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: :Follow
 
-  has_many :been_followeds,
+  has_many :relationships_where_user_is_followed,
     primary_key: :id,
     foreign_key: :followee_id,
     class_name: :Follow
 
-  has_many :followees,
-    through: :follows,
-    source: :followee
+  has_many :users_i_follow,
+    through: :relationships_where_user_is_follower,
+    source: :followed_user
 
   has_many :followers,
-    through: :been_followeds,
+    through: :relationships_where_user_is_followeds,
     source: :follower
-
 
 
   attr_reader :password

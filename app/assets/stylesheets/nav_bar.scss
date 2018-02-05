@@ -1,16 +1,9 @@
 @import "variables";
 
 
-.logo-container {
-  font-size: 14px;
-  font-family: 'Lato';
-  align-items: center;
-}
-
-
 .logo-text img {
-  width: 18%;
-  margin:auto;
+  width: 15%;
+  margin: auto;
   text-align: center;
 }
 
@@ -43,14 +36,12 @@
 
 .logout-btn {
   font-family: 'Lato';
-  font-weight: bolder;
-  padding: 0;
   box-sizing: border-box;
-  width: 80px;
+  width: 75px;
   height: 25px;
   font-size: 12px;
   background: none;
-  border: .0625rem solid;
+  border: .0525rem solid;
   border-radius: .125rem;
 
   &:hover {

@@ -9,3 +9,9 @@ json.images do
     end
   end
 end
+
+json.follows do
+  @user.relationships_where_user_is_follower.each do |follower|
+    json.set! follower.id, {follow_id: follower.id, followee_id: follower.followee_id}
+  end
+end

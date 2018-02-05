@@ -3,10 +3,6 @@ import {
   RECEIVE_FOLLOW,
   REMOVE_FOLOW
 } from  '../actions/follow_actions';
-import {
-  RECEIVE_USER
-} from '../actions/user_actions';
-
 
 export const followReducer = (state = {}, action) => {
   Object.freeze(state);

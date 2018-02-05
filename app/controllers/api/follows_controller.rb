@@ -3,10 +3,10 @@ class Api::FollowsController < ApplicationController
   before_action :ensure_sign_in, only: [:create, :destroy]
 
   def create
-    @follow = Follow.new(follower_id: current_user.id, followee_id: params[:followee_id])
+    @follow = Follow.new(follower_id: current_user.id, followee_id: params[:followed_user])
 
     if @follow.save
-      render :show
+      render 'api/follows/show'
     else
       render json: @follow.errors.full_messages, status: 422
     end

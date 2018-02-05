@@ -30,7 +30,7 @@ class Profile extends React.Component {
           <img className="profile_picture" src={this.props.user.profile_picture} />
           <h1 className="profile-name">{this.props.user.username}</h1>
           <div className="profile-space"></div>
-          <button className="follow-button">FOLLOW</button>
+          <button className="follow-button">Follow</button>
         </div>
 
         <ul className="profile-images-container">

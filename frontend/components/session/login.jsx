@@ -50,7 +50,7 @@ class Login extends React.Component {
   render (){
     return (
       <div className="session-form">
-        <h2 className="header-sign">SIGN IN</h2>
+        <h2 className="header-sign">Sign In</h2>
         <br/>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
@@ -77,8 +77,8 @@ class Login extends React.Component {
           <br/>
           <br/>
           <div className="login-btn-container">
-            <input className="login-btn" type="submit" value="SIGN IN" />
-            <button className="demo-btn" onClick={this.loginDemo}>DEMO</button>
+            <input className="login-btn" type="submit" value="Sign In" />
+            <button className="demo-btn" onClick={this.loginDemo}>Demo</button>
           </div>
         </form>
       </div>

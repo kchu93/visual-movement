@@ -15,14 +15,14 @@ class NavBar extends React.Component {
   render () {
     const display = this.props.currentUser ? (
       <div className="user-logged-in">
-        <Link to="/feed" className="navbarfeed">FEED</Link>
+        <Link to="/feed" className="navbarfeed">Feed</Link>
         <Link to={`/users/${this.props.currentUser.id}`} className="currentUser">{this.props.currentUser.username}</Link>
-        <button className="logout-btn" onClick={this.props.logout}>LOGOUT</button>
+        <button className="logout-btn" onClick={this.props.logout}>Logout</button>
       </div>
     ) : (
       <div className="left-side-buttons">
-        <Link className="btn" to="/signup">SIGN UP</Link>
-        <Link className="btn" to="/login">SIGN IN</Link>
+        <Link className="btn" to="/signup">Sign Up</Link>
+        <Link className="btn" to="/login">Sign In</Link>
       </div>
     );
 
