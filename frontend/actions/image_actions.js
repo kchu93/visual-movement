@@ -7,14 +7,16 @@ export const REMOVE_IMAGE = "DELETE_IMAGE";
 export const RECEIVE_IMAGE_ERRORS = "RECEIVE_IMAGE_ERRORS";
 
 
-const receiveImages = images => ({
+const receiveImages = ({images, users}) => ({
   type: RECEIVE_IMAGES,
-  images
+  images,
+  users
 });
 
-const receiveImage = image => ({
+const receiveImage = ({image, user}) => ({
   type: RECEIVE_IMAGE,
-  image
+  image,
+  user
 });
 
 const removeImage = imageId => ({

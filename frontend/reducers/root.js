@@ -7,7 +7,7 @@ import { followReducer } from './follow_reducer';
 
 export default combineReducers({
   session: sessionReducer,
-  user: userReducer,
+  users: userReducer,
   images: imageReducer,
   follows: followReducer,
   errors: errorsReducer

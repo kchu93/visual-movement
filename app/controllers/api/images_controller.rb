@@ -10,7 +10,7 @@ class Api::ImagesController < ApplicationController
 
   def show
     @image = Image.find(params[:id])
-    render json: @image
+    render 'api/images/show'
   end
 
   def create

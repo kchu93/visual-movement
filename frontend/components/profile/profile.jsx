@@ -20,9 +20,10 @@ class Profile extends React.Component {
 
 
   render () {
-    if (!this.props.images){
+    if (!this.props.user){
       return null;
     }
+
     return (
       <div className="Profile">
 

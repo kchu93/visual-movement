@@ -36,8 +36,7 @@ class ImageItems extends React.Component {
 
 
   render (){
-    console.log(this.props);
-    if (!this.props.image){
+    if (!this.props.image || !this.props.user){
       return null;
     }
     return (
@@ -45,7 +44,7 @@ class ImageItems extends React.Component {
         <div className="image-item-image-container">
           <img className="image-item"src={this.props.image.image_url}/>
         <div className="image-item-details-container">
-          <h1 className="image-item-username">{this.props.image.username}</h1>
+          <h1 className="image-item-username">{this.props.user.username}</h1>
         <h1 className="image-item-date">{this.dateConversion()}</h1>
         </div>
         </div>

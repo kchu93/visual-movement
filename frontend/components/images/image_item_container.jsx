@@ -5,11 +5,19 @@ import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = (state, ownProps) => {
+  let currentImage = state.images[ownProps.match.params.imageId];
+  let user;
+  if (currentImage){
+    user = state.users[currentImage.author_id];
+  } else {
+    user = null;
+  }
   return {
   imageId: ownProps.match.params.imageId,
   image: state.images[ownProps.match.params.imageId],
-  images: Object.values(state.images)
-};
+  images: Object.values(state.images),
+  user: user
+  };
 };
 
 const mapDispatchToProps = dispatch => ({

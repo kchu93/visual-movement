@@ -6,7 +6,7 @@ import { createFollow, deleteFollow } from '../../actions/follow_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   userId: ownProps.match.params.userId,
-  user: state.user,
+  user: state.users[ownProps.match.params.userId],
   images: Object.values(state.images),
 
 });
