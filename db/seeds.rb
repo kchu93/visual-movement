@@ -9,10 +9,10 @@ User.delete_all
 Image.delete_all
 
 DemoAccount = User.create(username: "demoaccount", email: "demoaccount", password: "demopassword", profile_picture: "https://i.imgur.com/lunEkbm.png")
-User1 = User.create(username: "kchu", email: "kchu", password: 123456, profile_picture: "https://i.imgur.com/DlxWDXz.jpg")
-User2 = User.create(username: "John", email: "John", password: 123456)
-User3 = User.create(username: "Bob", email: "Bob", password: 123456)
-User4 = User.create(username: "Frank", email: "Frank", password: 123456)
+User.create(username: "kchu", email: "kchu", password: 123456, profile_picture: "https://i.imgur.com/DlxWDXz.jpg")
+User.create(username: "tsaisu", email: "tomo", password: 123456, profile_picture: "https://i.imgur.com/500Q1dQ.jpg")
+User.create(username: "Bob", email: "Bob", password: 123456)
+User.create(username: "Frank", email: "Frank", password: 123456)
 
 # Image Seed DemoAccount
 
@@ -56,7 +56,6 @@ Image.create(image_url: "https://i.imgur.com/sF3SNUb.jpg", author_id: 1)
 Image.create(image_url: "https://i.imgur.com/htB2bD1.jpg", author_id: 1)
 
 
-
 # Image Seed kchu
 Image.create(image_url: "https://i.imgur.com/FGSCfdg.jpg", author_id: 2)
 Image.create(image_url: "https://i.imgur.com/SK4xamv.jpg", author_id: 2)
@@ -78,3 +77,22 @@ Image.create(image_url: "https://i.imgur.com/WRNNqLi.jpg", author_id: 2)
 Image.create(image_url: "https://i.imgur.com/kb1nuXh.jpg", author_id: 2)
 Image.create(image_url: "https://i.imgur.com/kR6Zirc.jpg", author_id: 2)
 Image.create(image_url: "https://i.imgur.com/2JDOWML.jpg", author_id: 2)
+
+
+# Image Seed tsaisu
+Image.create(image_url: "https://i.imgur.com/MSjvLUX.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/4nymmCd.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/HFpeyqj.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/JPTuDGv.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/OS68sPI.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/Ntt9lqW.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/eozXCi6.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/xYnKR8f.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/3YimSkD.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/nyuZyTB.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/9vuZQmr.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/PPkZobu.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/Lm1vynt.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/Lm1vynt.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/Spjx23w.jpg", author_id: 3)
+Image.create(image_url: "https://i.imgur.com/mafKxxJ.jpg", author_id: 3)

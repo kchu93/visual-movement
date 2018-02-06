@@ -19,7 +19,7 @@ end
 json.likes do
   @user.liked_images.each do |like|
     json.set! like.id do
-      json.extract! like, :id, :image_url
+      json.extract! like, :id, :image_url, :author_id
     end
   end
 end
