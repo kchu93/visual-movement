@@ -7,6 +7,7 @@ import HomePage from './homepage/homepage';
 import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
 import ImageItemContainer from './images/image_item_container';
+import LikesContainer from './likes/likes_container';
 
 // import Footer from './footer/footer';
 import {

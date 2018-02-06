@@ -8,7 +8,16 @@ class Image < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'User'
 
-  # 
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :image_id,
+    class_name: :Like
+
+  has_many :user_likes,
+    through: :likes,
+    source: :user
+
+  #
   # has_attached_file :picture, default_url: "missing.png"
   # validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
 

@@ -10,6 +10,15 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'Image'
 
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Like
+
+  has_many :liked_images,
+    through: :likes,
+    source: :image
+
 
   has_many :relationships_where_user_is_follower,
     primary_key: :id,

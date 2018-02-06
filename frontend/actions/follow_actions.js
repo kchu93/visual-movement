@@ -4,9 +4,9 @@ export const RECEIVE_FOLLOW = "RECEIVE_FOLLOW";
 export const REMOVE_FOLOW = "REMOVE_FOLLOW";
 export const RECEIVE_FOLLOW_ERRORS = "RECEIVE_FOLLOW_ERRORS";
 
-const receiveFollow = follow => ({
+const receiveFollow = (follows) => ({
   type: RECEIVE_FOLLOW,
-  follow
+  follows
 });
 
 const removeFollow = followId => ({

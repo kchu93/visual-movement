@@ -30,7 +30,6 @@ const receiveImageErrors = errors => ({
 });
 
 
-
 export const fetchImages = () => dispatch => (
   APIUtil.fetchImages().then(images => dispatch(receiveImages(images)), err => (dispatch(receiveImageErrors(err.responseJSON))
   ))
@@ -57,4 +56,13 @@ export const updateImage = formImage => dispatch => (
 
 export const deleteImage = imageId => dispatch => (
   APIUtil.deleteImage(imageId).then(imageId => dispatch(removeImage(imageId)))
+);
+
+
+export const createLike = imageId => dispatch => (
+  APIUtil.createLike(imageId).then(image => dispatch(receiveImage(image)))
+);
+
+export const deleteLike = imageId => dispatch => (
+  APIUtil.deleteLike(imageId).then(image => dispatch(receiveImage(imageId)))
 );

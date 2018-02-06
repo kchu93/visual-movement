@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { fetchImage } from '../../actions/image_actions';
 import ImageItems from  './image_item';
 import { withRouter } from 'react-router-dom';
-
+import { createLike, deleteLike } from '../../actions/like_action';
 
 const mapStateToProps = (state, ownProps) => {
   let currentImage = state.images[ownProps.match.params.imageId];
@@ -21,7 +21,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchImage: id => dispatch(fetchImage(id))
+  fetchImage: id => dispatch(fetchImage(id)),
+  createLike: id => dispatch(createLike(id)),
+  deleteLike: id => dispatch(deleteLike(id))
 });
 
 export default withRouter(connect(

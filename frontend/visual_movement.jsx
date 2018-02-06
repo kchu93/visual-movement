@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import createStore from './store/store';
 import Root from './components/root';
-import { createFollow, deleteFollow } from './utils/follow_api_util';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
@@ -17,7 +17,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const store = createStore(preloadedState);
   ReactDOM.render(<Root store={store} />, root);
 });
-
-
-window.createFollow = createFollow;
-window.deleteFollow = deleteFollow;

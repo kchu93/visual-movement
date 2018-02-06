@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LikesContainer from '../likes/likes_container';
+
 
 
 class ImageItems extends React.Component {
   constructor(props){
     super(props);
-
+    this.handleLike = this.handleLike.bind(this);
   }
 
-  componentDidMount(){
+  componentWillMount(){
     if (this.props.match.params.imageId) {
       this.props.fetchImage(this.props.match.params.imageId);
     }
@@ -34,11 +36,42 @@ class ImageItems extends React.Component {
     return fulldate + " " + time;
   }
 
+  handleLike(e){
+    e.preventDefault();
+    if (this.props.image.current_user_likes){
+      this.props.deleteLike(this.props.imageId);
+    } else {
+      this.props.createLike(this.props.imageId);
+    }
+  }
+
 
   render (){
     if (!this.props.image || !this.props.user){
       return null;
     }
+
+    let likeButton;
+    if (this.props.image.current_user_likes === true) {
+      likeButton = (
+        <button
+          className="image-item-like-button"
+          onClick={this.handleLike}>
+          Unlike
+        </button>
+      );
+    } else if (this.props.image.current_user_likes === false) {
+      likeButton = (
+        <button
+          onClick={this.handleLike}
+          className="image-item-like-button">
+          Like
+        </button>
+      );
+    } else {
+      likeButton = null;
+    }
+
     return (
       <div>
         <div className="image-item-image-container">
@@ -47,7 +80,10 @@ class ImageItems extends React.Component {
           <h1 className="image-item-username">{this.props.user.username}</h1>
         <h1 className="image-item-date">{this.dateConversion()}</h1>
         </div>
+        <div className="image-item-like-container">
+          {likeButton}
         </div>
+      </div>
       </div>
     );
   }

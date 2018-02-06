@@ -11,17 +11,20 @@ import {
   RECEIVE_IMAGE
 } from '../actions/image_actions';
 
+import {
+  RECEIVE_FOLLOW
+} from '../actions/follow_actions';
 
 
 
 export const userReducer = (state = {}, action) => {
   Object.freeze(state);
 
-
   let user;
   switch(action.type){
     case RECEIVE_USER:
     case RECEIVE_IMAGE:
+    case RECEIVE_FOLLOW:
       user = {};
       user[action.user.id] = action.user;
       return merge({}, state, user);

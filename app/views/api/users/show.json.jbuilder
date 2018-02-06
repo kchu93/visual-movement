@@ -11,7 +11,15 @@ json.images do
 end
 
 json.follows do
-  @user.relationships_where_user_is_follower.each do |follower|
-    json.set! follower.id, {follow_id: follower.id, followee_id: follower.followee_id}
+  @user.relationships_where_user_is_followed.each do |follower|
+    json.set! follower.id, {follower_id: follower.follower_id, followee_id: follower.followee_id}
+  end
+end
+
+json.likes do
+  @user.liked_images.each do |like|
+    json.set! like.id do
+      json.extract! like, :id, :image_url
+    end
   end
 end

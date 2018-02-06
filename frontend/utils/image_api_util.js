@@ -38,3 +38,21 @@ export const deleteImage = id => (
     url: `/api/images/${id}`,
   })
 );
+
+
+
+export const createLike = image_id => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/likes',
+    data: {image_id}
+  })
+);
+
+
+export const deleteLike = id => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/likes/${id}`
+  })
+);
