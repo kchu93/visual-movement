@@ -7,7 +7,7 @@ import HomePage from './homepage/homepage';
 import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
 import ImageItemContainer from './images/image_item_container';
-import LikesContainer from './likes/likes_container';
+import LikesTabContainer from './profile/likes_tab_container';
 
 // import Footer from './footer/footer';
 import {
@@ -23,6 +23,7 @@ export default () => (
     <NavBarContainer />
     <Switch>
       <AuthRoute exact path="/" component={HomePage} />
+      <Route exact path="/users/:userId/likes" component={LikesTabContainer} />
       <Route path="/users/:userId" component={ProfileContainer} />
       <Route path="/images/:imageId" component={ImageItemContainer} />
       <AuthRoute path="/login" component={LoginContainer} />

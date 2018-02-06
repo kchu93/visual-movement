@@ -5,6 +5,11 @@ import {
   REMOVE_IMAGE
 } from '../actions/image_actions';
 
+import {
+  RECEIVE_LIKE,
+  REMOVE_LIKE
+} from '../actions/like_action';
+
 import { RECEIVE_USER } from '../actions/user_actions';
 
 export const imageReducer = (state = {}, action) => {
@@ -19,7 +24,17 @@ export const imageReducer = (state = {}, action) => {
       return merge({}, state, {[action.image.id]: action.image});
 
     case RECEIVE_USER:
-      return merge({},action.images);
+      return merge({}, action.images);
+
+    case RECEIVE_LIKE:
+      newState[action.image.current_user_likes] = !action.image.current_user_likes;
+      return newState;
+
+    case REMOVE_LIKE:
+      newState[action.image.current_user_likes] = !action.image.current_user_likes;
+      return newState;
+
+
 
     case REMOVE_IMAGE:
       delete newState[action.imageId];

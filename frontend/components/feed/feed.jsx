@@ -12,6 +12,7 @@ class Feed extends React.Component {
   }
 
   render (){
+    let users = this.props.users;
     return (
       <div>
         <h1 className="feed-header"></h1>

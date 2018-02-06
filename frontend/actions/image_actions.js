@@ -64,5 +64,5 @@ export const createLike = imageId => dispatch => (
 );
 
 export const deleteLike = imageId => dispatch => (
-  APIUtil.deleteLike(imageId).then(image => dispatch(receiveImage(imageId)))
+  APIUtil.deleteLike(imageId).then(image => dispatch(receiveImage(image)))
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Profile extends React.Component {
+class LikesTab extends React.Component {
   constructor(props){
     super(props);
   }
@@ -20,11 +20,13 @@ class Profile extends React.Component {
 
 
   render () {
+    console.log(this.props);
     if (!this.props.user){
       return null;
     }
+
     return (
-      <div className="Profile">
+      <div className="likes-tab">
 
         <div className="profile-info-container">
           <img className="profile_picture" src={this.props.user.profile_picture} />
@@ -50,19 +52,19 @@ class Profile extends React.Component {
 
         <ul className="profile-images-container">
           {
-            this.props.images.map(image => (
-            <li key={image.id} className="profile-images">
-              <Link to={`/images/${image.id}`}>
-                <img src={image.image_url} />
+            this.props.likes.map(liked => (
+            <li key={liked.id} className="profile-images">
+              <Link to={`/images/${liked.id}`}>
+                <img src={liked.image_url} />
               </Link>
             </li>
             ))
           }
         </ul>
-
+        
       </div>
     );
   }
 }
 
-export default Profile;
+export default LikesTab;

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :images, only: [:index, :show, :create, :destroy, :update]
     resources :follows, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
+
+    get "users/:userId/likes", to:"users#likes"
   end
 
   root "static_pages#root"

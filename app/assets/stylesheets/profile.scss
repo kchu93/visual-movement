@@ -18,6 +18,7 @@
   align-items: center;
 }
 
+
 .profile-space{
   display: flex;
   padding-top: 12px;
@@ -30,12 +31,12 @@
 }
 
 .follow-button {
-  font-family: 'Arial';
+  font-family: 'Lato';
   padding: 0;
   box-sizing: border-box;
   width: 5rem;
   height: 2rem;
-  font-size: 11px;
+  font-size: 12px;
   background: none;
   border: .0525rem solid;
   border-radius: .125rem;
@@ -46,6 +47,20 @@
     color: $darkgold;
     border: 1px solid $darkgold;
   }
+}
+
+.profile-tabs-container{
+  display: flex;
+  justify-content: center;
+}
+
+.profile-tab {
+  font-family: 'Lato';
+  color: #888;
+  margin-top: 10px;
+  padding: 25px;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .profile-images {

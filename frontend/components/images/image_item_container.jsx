@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { fetchImage } from '../../actions/image_actions';
 import ImageItems from  './image_item';
 import { withRouter } from 'react-router-dom';
-import { createLike, deleteLike } from '../../actions/like_action';
+import { createLike, deleteLike } from '../../actions/image_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let currentImage = state.images[ownProps.match.params.imageId];

@@ -3,6 +3,8 @@
 .image-item-image-container{
   text-align: center;
   padding: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .image-item {
@@ -17,9 +19,40 @@
 
 .image-item-date {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: rgb(136, 136, 136);
   padding-top: 10px;
   position: absolute;
   margin-bottom: 15px;
+}
+
+.image-item-like-container {
+  text-align: right;
+}
+
+.image-item-like-button {
+  font-family: 'Lato';
+  box-sizing: border-box;
+  height: auto;
+  font-size: 12px;
+  background: none;
+  border-radius: .125rem;
+  border: 1px solid $darkgold;
+  color: $darkgold;
+  letter-spacing: 1px;
+
+}
+
+
+.image-item-unlike-button {
+  font-family: 'Lato';
+  box-sizing: border-box;
+  height: auto;
+  font-size: 12px;
+  background: none;
+  border-radius: .125rem;
+  border: 1px solid #888;
+  color: #888;
+  letter-spacing: 1px;
+
 }

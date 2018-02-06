@@ -64,7 +64,7 @@ class ImageItems extends React.Component {
       likeButton = (
         <button
           onClick={this.handleLike}
-          className="image-item-like-button">
+          className="image-item-unlike-button">
           Like
         </button>
       );

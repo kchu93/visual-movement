@@ -1,6 +1,5 @@
 json.image do
   json.extract! @image, :id, :image_url, :author_id, :created_at
-
   json.current_user_likes @image.likes.any? {|like| like.user_id == current_user.id}
 end
 
