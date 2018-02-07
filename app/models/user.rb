@@ -35,7 +35,7 @@ class User < ApplicationRecord
     source: :followed_user
 
   has_many :followers,
-    through: :relationships_where_user_is_followeds,
+    through: :relationships_where_user_is_followed,
     source: :follower
 
 

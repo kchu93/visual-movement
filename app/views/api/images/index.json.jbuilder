@@ -15,3 +15,14 @@ json.users do
     end
   end
 end
+
+
+json.followings do
+  @images.each do |image|
+    image.user.relationships_where_user_is_follower.each do |follower|
+      json.set! follower.id do
+        json.extract! follower, :follower_id, :followee_id
+      end
+    end
+  end
+end

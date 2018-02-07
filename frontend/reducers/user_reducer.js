@@ -1,7 +1,5 @@
 import merge from 'lodash/merge';
 
-// RECEIVE_IMAGES: used for setting fetchImages(index) all user information into the right key
-
 import {
   RECEIVE_USER
 } from '../actions/user_actions';
@@ -11,10 +9,6 @@ import {
   RECEIVE_IMAGE
 } from '../actions/image_actions';
 
-import {
-  RECEIVE_FOLLOW
-} from '../actions/follow_actions';
-
 
 
 export const userReducer = (state = {}, action) => {
@@ -22,9 +16,8 @@ export const userReducer = (state = {}, action) => {
 
   let user;
   switch(action.type){
+
     case RECEIVE_USER:
-    case RECEIVE_IMAGE:
-    case RECEIVE_FOLLOW:
       user = {};
       user[action.user.id] = action.user;
       return merge({}, state, user);

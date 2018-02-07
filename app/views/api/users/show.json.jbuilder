@@ -10,11 +10,7 @@ json.images do
   end
 end
 
-json.follows do
-  @user.relationships_where_user_is_followed.each do |follower|
-    json.set! follower.id, {follower_id: follower.follower_id, followee_id: follower.followee_id}
-  end
-end
+json.follows @user.followers.any? {|follower| follower.id == current_user.id}
 
 json.likes do
   @user.liked_images.each do |like|

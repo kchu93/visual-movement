@@ -6,6 +6,8 @@ class Api::SessionsController < ApplicationController
       params[:user][:password]
     )
 
+    @followees = @user.users_i_follow_ids
+
     if @user
       sign_in!(@user)
       render 'api/users/show'

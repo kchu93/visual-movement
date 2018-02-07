@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   constructor(props){
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  componentWillMount(){
-
+  handleClick(){
+    this.props.logout().then(() => this.props.history.push('/'));
   }
 
 
@@ -17,7 +18,7 @@ class NavBar extends React.Component {
       <div className="user-logged-in">
         <Link to="/feed" className="navbarfeed">Feed</Link>
         <Link to={`/users/${this.props.currentUser.id}`} className="currentUser">{this.props.currentUser.username}</Link>
-        <button className="logout-btn" onClick={this.props.logout}>Logout</button>
+        <button className="logout-btn" onClick={this.handleClick}>Logout</button>
       </div>
     ) : (
       <div className="left-side-buttons">

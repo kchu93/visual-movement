@@ -10,7 +10,7 @@ Image.delete_all
 
 DemoAccount = User.create(username: "demoaccount", email: "demoaccount", password: "demopassword", profile_picture: "https://i.imgur.com/lunEkbm.png")
 User.create(username: "kchu", email: "kchu", password: 123456, profile_picture: "https://i.imgur.com/DlxWDXz.jpg")
-User.create(username: "tsaisu", email: "tomo", password: 123456, profile_picture: "https://i.imgur.com/500Q1dQ.jpg")
+User.create(username: "tsaisu", email: "tomo", password: 123456, profile_picture: "https://i.imgur.com/dU03FHt.jpg")
 User.create(username: "Bob", email: "Bob", password: 123456)
 User.create(username: "Frank", email: "Frank", password: 123456)
 

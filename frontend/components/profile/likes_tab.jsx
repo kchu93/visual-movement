@@ -61,7 +61,7 @@ class LikesTab extends React.Component {
             ))
           }
         </ul>
-        
+
       </div>
     );
   }

@@ -4,8 +4,6 @@ export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_USER_ERRORS = "RECEIVE_USER_ERRORS";
 
 
-
-
 export const receiveUser = ({ user, images, follows, likes }) => {
   return ({
     type: RECEIVE_USER,
@@ -25,4 +23,12 @@ export const receiveErrors = errors => ({
 export const fetchUser = id => dispatch => (
   APIUtil.fetchUser(id).then(user =>
     dispatch(receiveUser(user)),err => (dispatch(receiveErrors(err.responseJSON))))
+);
+
+export const createFollow = (followed_user) => dispatch => (
+  APIUtil.createFollow(followed_user).then(user => dispatch(receiveUser(user)))
+);
+
+export const deleteFollow = followId => dispatch => (
+  APIUtil.deleteFollow(followId).then(user => dispatch(receiveUser(user)))
 );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class Profile extends React.Component {
   constructor(props){
     super(props);
+    this.handleFollow = this.handleFollow.bind(this);
   }
 
   componentWillMount(){
@@ -18,11 +19,43 @@ class Profile extends React.Component {
     }
   }
 
+  handleFollow(e) {
+    e.preventDefault();
+    if (this.props.follows === true){
+      this.props.deleteFollow(this.props.match.params.userId);
+    } else {
+      this.props.createFollow(this.props.match.params.userId);
+    }
+  }
 
   render () {
     if (!this.props.user){
       return null;
     }
+
+    let followButton;
+
+    if (this.props.follows === false){
+      followButton = (
+        <button
+          className="follow-button"
+          onClick={this.handleFollow}>
+          Follow
+        </button>
+      );
+    } else if (this.props.follows === true){
+      followButton = (
+        <button
+          onClick={this.handleFollow}
+          className="unfollow-button">
+          Unfollow
+        </button>
+      );
+    } else {
+      followButton = null;
+    }
+
+
     return (
       <div className="Profile">
 
@@ -30,7 +63,7 @@ class Profile extends React.Component {
           <img className="profile_picture" src={this.props.user.profile_picture} />
           <h1 className="profile-name">{this.props.user.username}</h1>
           <div className="profile-space"></div>
-          <button className="follow-button">Follow</button>
+          {followButton}
         </div>
 
         <div className="profile-tabs-container">

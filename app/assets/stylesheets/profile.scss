@@ -49,6 +49,25 @@
   }
 }
 
+.unfollow-button {
+  font-family: 'Lato';
+  padding: 0;
+  box-sizing: border-box;
+  width: 5rem;
+  height: 2rem;
+  font-size: 12px;
+  background: none;
+  border: .0525rem solid;
+  border-radius: .125rem;
+  color: $darkgold;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: #888;
+    border: 1px solid #888;
+  }
+}
+
 .profile-tabs-container{
   display: flex;
   justify-content: center;

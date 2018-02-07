@@ -23,6 +23,8 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = selected_user
+
+    @followees = @user.users_i_follow_ids
     if @user
       render 'api/users/show'
     else

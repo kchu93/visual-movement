@@ -11,3 +11,19 @@ export const fetchUser = id => (
     url: `/api/users/${id}`
   })
 );
+
+
+export const createFollow = (followed_user) => (
+  $.ajax({
+    method: "POST",
+    url: `/api/follows`,
+    data: { followed_user }
+  })
+);
+
+export const deleteFollow = (id) => (
+  $.ajax({
+    method: "DELETE",
+    url: `/api/follows/${id}`
+  })
+);
