@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Masonry from 'react-masonry-component';
 
 class Profile extends React.Component {
   constructor(props){
@@ -81,7 +82,7 @@ class Profile extends React.Component {
           </Link>
         </div>
 
-        <ul className="profile-images-container">
+        <Masonry className="profile-images-container">
           {
             this.props.images.map(image => (
             <li key={image.id} className="profile-images">
@@ -91,7 +92,7 @@ class Profile extends React.Component {
             </li>
             ))
           }
-        </ul>
+        </Masonry>
 
       </div>
     );

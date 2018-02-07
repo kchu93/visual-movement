@@ -22,7 +22,7 @@ export default () => (
   <div>
     <NavBarContainer />
     <Switch>
-      <AuthRoute exact path="/" component={HomePage} />
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/users/:userId/likes" component={LikesTabContainer} />
       <Route path="/users/:userId" component={ProfileContainer} />
       <Route path="/images/:imageId" component={ImageItemContainer} />

@@ -15,27 +15,27 @@ class NavBar extends React.Component {
 
   render () {
     const display = this.props.currentUser ? (
-      <div className="user-logged-in">
-        <Link to="/feed" className="navbarfeed">Feed</Link>
-        <Link to={`/users/${this.props.currentUser.id}`} className="currentUser">{this.props.currentUser.username}</Link>
+      <div className="nav-bar-right-side">
+        <Link to="/feed" className="nav-bar-links">Feed</Link>
+        <Link to={`/users/${this.props.currentUser.id}`} className="nav-bar-links">{this.props.currentUser.username}</Link>
         <button className="logout-btn" onClick={this.handleClick}>Logout</button>
       </div>
     ) : (
-      <div className="left-side-buttons">
-        <Link className="btn" to="/signup">Sign Up</Link>
-        <Link className="btn" to="/login">Sign In</Link>
+      <div className="nav-bar-right-side">
+        <Link className="nav-bar-links" to="/signup">Sign Up</Link>
+        <Link className="nav-bar-links" to="/login">Sign In</Link>
       </div>
     );
 
     return (
-      <header className="nav-bar">
-        <h1 className="logo-container">
-          <Link className="logo-text" to="/"><img src="https://i.imgur.com/YZNoZhp.png"></img></Link>
-        </h1>
+      <div className="nav-bar">
+        <div className="nav-bar-left-side">
+          <Link to="/"><img src="https://i.imgur.com/P4gUDii.png"></img></Link>
+        </div>
         <div className="left-content">
           {display}
         </div>
-      </header>
+      </div>
     );
   }
 }

@@ -7,6 +7,10 @@ json.user do
   json.extract! @image.user, :id, :username, :profile_picture
 end
 
+json.imagetest do
+  json.extract! @image.image, :url
+end
+
 
 # json.likes do
 #   @image.likes.each do |like|

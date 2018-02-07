@@ -1,37 +1,26 @@
 @import "variables";
 
-
-.logo-text img {
-  width: 15%;
-  margin: auto;
-  text-align: center;
-}
-
 .nav-bar {
-  box-sizing: border-box;
-  padding: 15px;
   display: flex;
   justify-content: space-between;
   background: $white;
-  height: 100%;
-  position: relative;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 40px;
 }
 
+.nav-bar-left-side img {
+  width: 12vw;
+  text-align: left;
+  vertical-align: middle;
+  margin-top: 5px;
+}
 
-.btn {
+.nav-bar-right-side {
   font-family: 'Lato';
-  margin-right: 12px;
-  margin-left: 12px;
   font-size: 12px;
-  text-align: center;
-  padding-top: 8px;
-
-}
-
-.left-side-buttons {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+  text-align: left;
 }
 
 .logout-btn {
@@ -50,47 +39,17 @@
   }
 }
 
-.currentUser {
+.nav-bar-links {
   font-family: 'Lato';
   font-size: 12px;
   font-weight: bold;
   min-width: 80px;
-  min-height: 25px;
-  width: auto;
+  height: auto;
   text-align: center;
   vertical-align: middle;
-  line-height: 25px;
-  padding: 0;
   margin-right: 20px;
 
   &:hover {
     color: $darkgold;
   }
-}
-
-.navbarfeed {
-  font-family: 'Lato';
-  font-size: 12px;
-  font-weight: bold;
-  min-width: 80px;
-  min-height: 25px;
-  width: auto;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 25px;
-  padding: 0;
-  &:hover {
-    color: $darkgold;
-  }
-}
-
-.user-logged-in{
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-.left-content {
-  width: 50%;
-  text-align: right;
 }

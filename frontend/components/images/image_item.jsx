@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LikesContainer from '../likes/likes_container';
+
 
 
 
@@ -47,7 +47,8 @@ class ImageItems extends React.Component {
 
 
   render (){
-    if (!this.props.image || !this.props.user){
+    console.log(this.props);
+    if (!this.props.image|| !this.props.user){
       return null;
     }
 

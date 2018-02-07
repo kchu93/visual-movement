@@ -6,38 +6,39 @@
 
 
 .section1-link {
-  background-image: asset-url('bamboowhite.png');
+  background-image: asset-url('testgif.gif');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   background-size: cover;
-  height: 100%;
-  width: 50%;
-  min-height: 250px;
+  width: 100%;
+  min-height: 750px;
   box-sizing: border-box;
   opacity: .95;
 }
 
 .section1-link:hover{
-  background-image: asset-url('bambooblack.png');
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .8s ease-in-out;
 }
 
-.section2-link {
-  background-image: asset-url('rightsideblack.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-size: cover;
-  height: 100%;
-  width: 50%;
-  min-height: 250px;
-  left: 50%;
-  box-sizing: border-box;
-  opacity: .95;
-}
-
-.section2-link:hover {
-  background-image: asset-url('rightsidewhite.png');
-}
+// .section2-link {
+//   background-image: asset-url('rightsideblack.png');
+//   background-position: center;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   position: absolute;
+//   background-size: cover;
+//   height: 100%;
+//   width: 50%;
+//   min-height: 250px;
+//   left: 50%;
+//   box-sizing: border-box;
+//   opacity: .95;
+// }
+//
+// .section2-link:hover {
+//   background-image: asset-url('rightsidewhite.png');
+// }

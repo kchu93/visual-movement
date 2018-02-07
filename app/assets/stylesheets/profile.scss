@@ -1,8 +1,8 @@
 @import "variables";
 
 .profile-images-container{
-  padding-left: 4%;
   list-style: none;
+  padding-left: 1%;
 }
 
 .profile_picture {
@@ -40,12 +40,14 @@
   background: none;
   border: .0525rem solid;
   border-radius: .125rem;
-  color: #888;
+  color: $darkgold;
   letter-spacing: 1px;
+  opacity: .75;
 
   &:hover {
-    color: $darkgold;
-    border: 1px solid $darkgold;
+    color: #888;
+    border: 1px solid #888;
+    opacity: .75;
   }
 }
 
@@ -59,12 +61,15 @@
   background: none;
   border: .0525rem solid;
   border-radius: .125rem;
-  color: $darkgold;
+  color: #888;
   letter-spacing: 1px;
+  opacity: .75;
 
   &:hover {
-    color: #888;
-    border: 1px solid #888;
+    color: $darkgold;
+    border: 1px solid $darkgold;
+    opacity: .75;
+
   }
 }
 
@@ -86,7 +91,7 @@
   width: 15%;
   vertical-align: bottom;
   display: inline-block;
-  padding: 4%;
+  padding: 2%;
 }
 
 .profile-images img {

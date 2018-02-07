@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Masonry from 'react-masonry-component';
+
 
 class LikesTab extends React.Component {
   constructor(props){
     super(props);
+    this.handleFollow = this.handleFollow.bind(this);
   }
 
   componentWillMount(){
@@ -18,12 +21,45 @@ class LikesTab extends React.Component {
     }
   }
 
+  handleFollow(e) {
+    e.preventDefault();
+    if (this.props.follows === true){
+      this.props.deleteFollow(this.props.match.params.userId);
+    } else {
+      this.props.createFollow(this.props.match.params.userId);
+    }
+  }
+
+
 
   render () {
-    console.log(this.props);
+    
     if (!this.props.user){
       return null;
     }
+
+    let followButton;
+
+    if (this.props.follows === false){
+      followButton = (
+        <button
+          className="follow-button"
+          onClick={this.handleFollow}>
+          Follow
+        </button>
+      );
+    } else if (this.props.follows === true){
+      followButton = (
+        <button
+          onClick={this.handleFollow}
+          className="unfollow-button">
+          Unfollow
+        </button>
+      );
+    } else {
+      followButton = null;
+    }
+
 
     return (
       <div className="likes-tab">
@@ -32,7 +68,7 @@ class LikesTab extends React.Component {
           <img className="profile_picture" src={this.props.user.profile_picture} />
           <h1 className="profile-name">{this.props.user.username}</h1>
           <div className="profile-space"></div>
-          <button className="follow-button">Follow</button>
+          {followButton}
         </div>
 
         <div className="profile-tabs-container">
@@ -50,7 +86,7 @@ class LikesTab extends React.Component {
           </Link>
         </div>
 
-        <ul className="profile-images-container">
+        <Masonry className="profile-images-container">
           {
             this.props.likes.map(liked => (
             <li key={liked.id} className="profile-images">
@@ -60,7 +96,7 @@ class LikesTab extends React.Component {
             </li>
             ))
           }
-        </ul>
+        </Masonry>
 
       </div>
     );

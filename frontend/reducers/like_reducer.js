@@ -10,7 +10,7 @@ export const likeReducer = (state = {}, action) => {
   switch(action.type){
 
   case RECEIVE_USER:
-    return merge({}, state, action.likes);
+    return merge({}, action.likes);
 
   default:
     return state;

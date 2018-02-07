@@ -17,6 +17,7 @@ export const userReducer = (state = {}, action) => {
   let user;
   switch(action.type){
 
+    case RECEIVE_IMAGE:
     case RECEIVE_USER:
       user = {};
       user[action.user.id] = action.user;
