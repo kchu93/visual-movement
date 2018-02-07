@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
+import { ProfileTabs } from './profile_tabs';
 
 class Profile extends React.Component {
   constructor(props){
@@ -70,20 +71,9 @@ class Profile extends React.Component {
           {followButton}
         </div>
 
-        <div className="profile-tabs-container">
-
-          <Link
-            className="profile-tab"
-            to={`/users/${this.props.user.id}`}>
-            Images
-          </Link>
-
-          <Link
-            className="profile-tab"
-            to={`/users/${this.props.user.id}/likes`}>
-            Likes
-          </Link>
-        </div>
+        <ProfileTabs
+          user={this.props.user}
+          />
 
         <Masonry className="profile-images-container">
           {

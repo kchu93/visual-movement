@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
+import { ProfileTabs } from './profile_tabs';
 
 
 class LikesTab extends React.Component {
@@ -72,28 +73,17 @@ class LikesTab extends React.Component {
           {followButton}
         </div>
 
-        <div className="profile-tabs-container">
-
-          <Link
-            className="profile-tab"
-            to={`/users/${this.props.user.id}`}>
-            Images
-          </Link>
-
-          <Link
-            className="profile-tab"
-            to={`/users/${this.props.user.id}/likes`}>
-            Likes
-          </Link>
-        </div>
+        <ProfileTabs
+          user={this.props.user}
+          />
 
         <Masonry className="profile-images-container">
           {
             this.props.likes.map(liked => (
             <li key={liked.id} className="profile-images">
-              <Link to={`/images/${liked.id}`}>
+              <NavLink to={`/images/${liked.id}`}>
                 <img src={liked.image_url} />
-              </Link>
+              </NavLink>
             </li>
             ))
           }

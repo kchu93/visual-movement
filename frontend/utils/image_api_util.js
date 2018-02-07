@@ -1,3 +1,5 @@
+import * as ImageActions from '../actions/image_actions';
+
 export const fetchImages = () => (
   $.ajax({
     method: 'GET',
@@ -6,11 +8,13 @@ export const fetchImages = () => (
 );
 
 
-export const createImage = image => (
+export const createImage = (formData, callback) => (
   $.ajax({
     method: 'POST',
     url: '/api/images',
-    data: {image}
+    processData: false,
+    contentType: false,
+    data: formData
   })
 );
 

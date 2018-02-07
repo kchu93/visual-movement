@@ -50,6 +50,6 @@ class Api::ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:image_url, :author_id, :description)
+    params.require(:image).permit(:image_url, :description, :image)
   end
 end
