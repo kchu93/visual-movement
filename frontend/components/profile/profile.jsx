@@ -30,13 +30,16 @@ class Profile extends React.Component {
   }
 
   render () {
+    console.log(this.props);
     if (!this.props.user){
       return null;
     }
 
     let followButton;
-
-    if (this.props.follows === false){
+    if (this.props.currentUser.id === parseInt(this.props.match.params.userId)){
+      followButton = null;
+    }
+    else if (this.props.follows === false){
       followButton = (
         <button
           className="follow-button"

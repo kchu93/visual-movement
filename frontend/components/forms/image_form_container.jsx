@@ -1,13 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createImage } from '../../actions/image_actions';
+import ImageForm from './image_form';
 
 
-class ImageForm extends React.Component {
-  constructor(props){
-    super(props);
+const mapStateToProps = state => ({
+  currentUser: state.session.currentUser
+});
 
-    this.state = {
 
-    };
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  createImage: image => dispatch(createImage(image))
+});
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ImageForm);

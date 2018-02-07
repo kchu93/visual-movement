@@ -33,7 +33,7 @@ class ImageItems extends React.Component {
     let fulldate = month + " " + day + ", " + year;
     let time = timestamp.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 
-    return fulldate + " " + time;
+    return `${fulldate} ${time}`;
   }
 
   handleLike(e){
