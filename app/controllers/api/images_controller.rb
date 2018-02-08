@@ -19,7 +19,7 @@ class Api::ImagesController < ApplicationController
     if @image.save
       render :show
     else
-      render json: @image.errors.full_messages, status: 401
+      render json: ["Please upload photo"], status: 401
     end
   end
 
@@ -27,10 +27,10 @@ class Api::ImagesController < ApplicationController
     @image = Image.find(params[:id])
 
     if @image.author_id == current_user.id
-      @image.update(image_params)
-      render json: @image
+      @image.update!(image_params)
+      render 'api/images/show'
     else
-      render json: @image.errors.full_messages, status: 401
+      render json: ["Not Authorized to Edit Image"], status: 422
     end
   end
 
@@ -50,6 +50,6 @@ class Api::ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:image_url, :description, :image)
+    params.require(:image).permit(:description, :image)
   end
 end

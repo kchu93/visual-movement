@@ -19,6 +19,9 @@ export const receiveErrors = errors => ({
   errors
 });
 
+export const clearErrors =  () => dispatch => (
+   dispatch(receiveErrors([]))
+);
 
 export const fetchUser = id => dispatch => (
   APIUtil.fetchUser(id).then(user =>
@@ -26,9 +29,9 @@ export const fetchUser = id => dispatch => (
 );
 
 export const createFollow = (followed_user) => dispatch => (
-  APIUtil.createFollow(followed_user).then(user => dispatch(receiveUser(user)))
+  APIUtil.createFollow(followed_user).then(user => dispatch(receiveUser(user)), err => (dispatch(receiveErrors(err.responseJSON))))
 );
 
 export const deleteFollow = followId => dispatch => (
-  APIUtil.deleteFollow(followId).then(user => dispatch(receiveUser(user)))
+  APIUtil.deleteFollow(followId).then(user => dispatch(receiveUser(user)), err => (dispatch(receiveErrors(err.responseJSON))))
 );

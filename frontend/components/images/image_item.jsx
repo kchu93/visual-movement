@@ -77,13 +77,29 @@ class ImageItems extends React.Component {
       <div>
         <div className="image-item-image-container">
           <img className="image-item"src={this.props.image.image_url}/>
-        <div className="image-item-details-container">
-          <h1 className="image-item-username">{this.props.user.username}</h1>
-        <h1 className="image-item-date">{this.dateConversion()}</h1>
         </div>
-        <div className="image-item-like-container">
-          {likeButton}
+
+        <div className="image-item-description-container">
+          <div className="image-item-left-side">
+            <Link
+              to={`/users/${this.props.image.author_id}`}
+              className="image-item-username">
+              {this.props.user.username}
+            </Link>
+            <p className="image-item-description">
+              {this.props.image.description}
+            </p>
+          </div>
+
+        <div className="image-item-right-container">
+          <div>
+            {likeButton}
+          </div>
+          <p className="image-item-text">
+            {this.dateConversion()}
+          </p>
         </div>
+
       </div>
       </div>
     );

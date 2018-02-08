@@ -45,7 +45,7 @@ class Signup extends React.Component {
   render () {
     return (
       <div className="session-form">
-        <h2 className="header-signup">Sign In</h2>
+        <h2 className="header-signup">Sign Up</h2>
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           {this.renderErrors()}
           <br/>

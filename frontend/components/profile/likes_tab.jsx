@@ -82,7 +82,7 @@ class LikesTab extends React.Component {
             this.props.likes.map(liked => (
             <li key={liked.id} className="profile-images">
               <NavLink to={`/images/${liked.id}`}>
-                <img src={liked.image_url} />
+                <img src={liked.image} />
               </NavLink>
             </li>
             ))

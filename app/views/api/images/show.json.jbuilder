@@ -1,15 +1,13 @@
 json.image do
-  json.extract! @image, :id, :image_url, :author_id, :created_at
+  json.extract! @image, :id, :author_id, :description, :created_at
   json.current_user_likes @image.likes.any? {|like| like.user_id == current_user.id}
+  json.image_url asset_path(@image.image.url(:original))
 end
 
 json.user do
   json.extract! @image.user, :id, :username, :profile_picture
 end
 
-json.imagetest do
-  json.extract! @image.image, :url
-end
 
 
 # json.likes do

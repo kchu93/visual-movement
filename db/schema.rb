@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20180207171115) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string "image_url", null: false
     t.integer "author_id", null: false
     t.string "description"
     t.datetime "created_at", null: false
@@ -35,7 +34,6 @@ ActiveRecord::Schema.define(version: 20180207171115) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.index ["author_id"], name: "index_images_on_author_id"
-    t.index ["image_url"], name: "index_images_on_image_url", unique: true
   end
 
   create_table "likes", force: :cascade do |t|

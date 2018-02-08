@@ -22,7 +22,6 @@ export const imageReducer = (state = {}, action) => {
     case RECEIVE_USER:
       return merge({}, action.images);
 
-
     case REMOVE_IMAGE:
       delete newState[action.imageId];
       return newState;

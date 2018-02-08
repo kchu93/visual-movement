@@ -9,6 +9,7 @@ import ProfileContainer from './profile/profile_container';
 import ImageItemContainer from './images/image_item_container';
 import LikesTabContainer from './profile/likes_tab_container';
 import ImageForm from './forms/image_form_container';
+import ImageEdit from './forms/image_edit_container';
 
 // import Footer from './footer/footer';
 import {
@@ -25,7 +26,8 @@ export default () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/users/:userId/likes" component={LikesTabContainer} />
-      <Route path="/users/:userId" component={ProfileContainer} />
+      <ProtectedRoute path="/users/:userId" component={ProfileContainer} />
+      <Route path="/images/:imageId/update" component={ImageEdit} />
       <Route path="/images/:imageId" component={ImageItemContainer} />
       <Route path="/upload" component={ImageForm} />
       <AuthRoute path="/login" component={LoginContainer} />

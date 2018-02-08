@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
 
-  validates :image_url, :author_id, presence: true
+  validates :author_id, :image, presence: true
 
   belongs_to :user,
     primary_key: :id,

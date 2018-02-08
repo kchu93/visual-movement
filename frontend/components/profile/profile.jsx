@@ -31,7 +31,6 @@ class Profile extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     if (!this.props.user){
       return null;
     }
@@ -77,7 +76,7 @@ class Profile extends React.Component {
 
         <Masonry className="profile-images-container">
           {
-            this.props.images.map(image => (
+            this.props.images.reverse().map(image => (
             <li key={image.id} className="profile-images">
               <Link to={`/images/${image.id}`}>
                 <img src={image.image_url} />

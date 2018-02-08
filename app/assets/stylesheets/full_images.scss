@@ -1,34 +1,52 @@
 @import "variables";
 
 .image-item-image-container{
-  text-align: center;
-  padding: 15px;
-  padding-right: 25px;
-  padding-left: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
 
 .image-item {
-  height: 40vw;
-  padding-bottom: 35px;
+  height: 35vw;
+  padding-bottom: 15px;
+}
+
+.image-item-description-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.image-item-left-side {
+  padding: 20px;
+  margin-top: 6px;
 }
 
 
-.image-item-details-container{
-  text-align: left;
+.image-item-right-container {
+  text-align: right;
+  padding: 20px;
 }
 
-.image-item-date {
-  display: block;
+.image-item-description {
   font-size: 12px;
   color: rgb(136, 136, 136);
   padding-top: 10px;
-  position: absolute;
-  margin-bottom: 15px;
 }
 
-.image-item-like-container {
-  text-align: right;
+
+.image-item-text {
+  font-size: 12px;
+  color: rgb(136, 136, 136);
+  padding-top: 10px;
 }
+
+.image-item-username {
+  font-size: 16px;
+  letter-spacing: 2px;
+
+}
+
 
 .image-item-like-button {
   font-family: 'Lato';
@@ -40,7 +58,6 @@
   border: 1px solid $darkgold;
   color: $darkgold;
   letter-spacing: 1px;
-
 }
 
 
@@ -54,5 +71,78 @@
   border: 1px solid #888;
   color: #888;
   letter-spacing: 1px;
+}
 
+
+
+
+
+
+// EDIT PAGE
+
+.image-item-edit-container{
+  display: flex;
+  justify-content: center;
+}
+
+.image-item-edit-left-side {
+  padding-right: 10px;
+}
+
+.image-item-right-side {
+  display: flex;
+  justify-content: center;
+}
+
+.image-item-edit-submit-container{
+  text-align: center;
+  padding-left: 20px;
+}
+
+.image-item-edit-delete-container {
+  width: 200px;
+  text-align: right;
+  margin-left: 200px
+}
+
+
+
+.image-item-edit-description {
+  align-content: center;
+  text-align: center;
+  height: 20px;
+  width: 120px;
+}
+
+.image-item-edit-submit {
+  text-align: center;
+  font-family: 'Lato';
+  box-sizing: border-box;
+  height: auto;
+  font-size: 12px;
+  background: none;
+  border-radius: .125rem;
+  border: 1px solid #888;
+  color: #888;
+  letter-spacing: 1px;
+  height: 26px;
+  width: 120px;
+  text-align: center;
+}
+
+
+.image-item-edit-delete {
+  text-align: center;
+  font-family: 'Lato';
+  box-sizing: border-box;
+  height: auto;
+  font-size: 12px;
+  background: none;
+  border-radius: .125rem;
+  border: 1px solid $errorred;
+  color: $errorred;
+  letter-spacing: 1px;
+  height: 26px;
+  width: 110px;
+  text-align: center;
 }

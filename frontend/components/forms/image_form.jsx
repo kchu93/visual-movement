@@ -10,8 +10,7 @@ class ImageForm extends React.Component {
     this.state = {
       author_id: this.props.currentUser.id,
       description: "",
-      image_url: 'aklsdjkflaj',
-      imageFile: null,
+      imageFile: "",
       imageUrl: ""
     };
 
@@ -20,11 +19,29 @@ class ImageForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
   updateDescription(e){
     e.preventDefault();
     this.setState({
       description: e.target.value
     });
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors ? this.props.errors.map((error,i) => (
+          <div
+            className="error-text-signup"
+            key={`error-${i}`}>
+            {error}
+          </div>
+        )) : ""}
+      </ul>
+    );
   }
 
   updateFile(e){
@@ -48,21 +65,51 @@ class ImageForm extends React.Component {
     const formData = new FormData();
     formData.append("image[description]", this.state.description);
     formData.append("image[image]", this.state.imageFile);
-    formData.append("image[image_url]", this.state.image_url);
-    ApiUtil.createImage(formData, this.goBack);
+    ApiUtil.createImage(formData, this.goBack).then(() => this.props.history.push(`users/${this.props.currentUser.id}`));
   }
 
 
   render() {
+    console.log(this.props);
     return (
-      <div>
-        Upload Image!
+      <div className="image-form-main-container">
+        <h1>Create Image</h1>
+        {this.renderErrors()}
+        <div className="image-form-upper">
+            <img
+              className="image-form-image-preview"
+              src={this.state.imageUrl}
+            />
+        </div>
 
-        <input type="text" onChange={this.updateDescription} />
-        <input type="file" onChange={this.updateFile} />
-        <button onClick={this.handleSubmit}>Create Image</button>
-        <img src={this.state.imageUrl} />
-      </div>
+          <input
+            className="image-form-description-input"
+            type="text"
+            placeholder="Add caption"
+            onChange={this.updateDescription} />
+
+        <div className="image-form-lower">
+
+          <input
+            name="file"
+            type="file"
+            id="file"
+            className="inputfile"
+            onChange={this.updateFile} />
+
+          <label htmlFor="file" className="image-form-label">Upload Image</label>
+
+
+
+          <button
+            className="image-form-submit"
+            onClick={this.handleSubmit}>
+            Create Image
+          </button>
+
+        </div>
+
+    </div>
     );
   }
 }
