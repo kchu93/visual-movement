@@ -9,6 +9,7 @@
 
 Visual Movement is a full-stack single-page application inspired by VSCO's creative platform. Visual Movement uses Rails/PostgreSQL backend with React.js and Redux on the frontend
 <br>
+<<<<<<< HEAD
 <br>
 
 <div align="left">
@@ -23,6 +24,21 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 <br>
 
 
+=======
+<br>
+
+<div align="left">
+  <h1 font-weight="bold">Features</h1>
+    <li> User Authentication with secure frontend and backend </li>
+    <li> User photo upload using AWS + Paperclip </li>
+    <li> User ability to follow and unfollow other profiles </li>
+    <li> User ability to like and unlike photos </li>
+    <li> Feed page to display images </li>
+    <li> User search functionality </li>
+  <div>
+<br>
+    
+>>>>>>> 3dc476894ae76567b67976768c5b348957409489
 <div>
   <h1>User Feed</h1>
     <p>
@@ -34,8 +50,11 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 </div>
 
 <br>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3dc476894ae76567b67976768c5b348957409489
 <div>
   <h1>Upload Photo</h1>
     <p>
@@ -48,7 +67,10 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 </div>
 
 <br>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3dc476894ae76567b67976768c5b348957409489
 <div align="left">
   <h1>User Profile</h1>
     <li>Users can view other profiles and see their images within a Masonry layout.</li>
@@ -66,5 +88,6 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
   <li>Users can like photos from this view</li>
   <div align="center">
     <img src="./app/assets/images/singlephoto.png"
+</div>
 </div>
 </div>
