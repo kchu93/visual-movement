@@ -8,7 +8,6 @@
 
   <a href="https://visualmovement.herokuapp.com/#/">Visual Movement Live Demo</a>
 
-[Visual Movement - Live Demo](https://visualmovement.herokuapp.com/#/)
 <br>
 <br>
 
@@ -59,6 +58,7 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
     <img src="./app/assets/images/userprofile.png"
 </div>
 
+<br>
 
 ```
 <Masonry className="profile-images-container">
@@ -74,6 +74,7 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 </Masonry>
 
 ```
+<br>
 
 <p align="left">
   Achieved Masonry blocks using Masonry for React while displaying as block.
