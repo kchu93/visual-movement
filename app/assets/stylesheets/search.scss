@@ -26,6 +26,10 @@
   display: flex;
   justify-content: center;
   padding: 50px;
+
+  & img {
+    width: 18vw;
+  }
 }
 
 .search-result-username {

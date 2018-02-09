@@ -3,7 +3,7 @@
 .image-item-image-container{
   display: flex;
   justify-content: center;
-  padding: 30px;
+  padding: 18px;
 }
 
 .image-item {
@@ -91,7 +91,7 @@
 
 .image-item-cog {
   color: #888;
-  margin-top: 3.5px;
+  margin-top: 3px;
   margin-right: 10px;
   font-size: 13px;
 
@@ -167,5 +167,24 @@
 
   &:hover {
     color: $errorred;
+  }
+}
+
+
+.back-button-box {
+  background: none;
+  border: none;
+  padding-left: 100px;
+  padding-top: 20px;
+
+  .back-button-icon {
+    color: #888;
+    font-size: 14px;
+    opacity: .5;
+  }
+
+  .back-button-icon:hover {
+    color: $darkgold;
+    opacity: .75;
   }
 }

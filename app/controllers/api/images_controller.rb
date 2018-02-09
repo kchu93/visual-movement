@@ -4,6 +4,7 @@ class Api::ImagesController < ApplicationController
 
   def index
     @images = Image.all
+    @imagearray = @images.order(id: :desc).pluck(:id).shuffle
     render 'api/images/index'
   end
 

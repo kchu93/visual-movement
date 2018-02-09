@@ -9,6 +9,7 @@ class ImageItems extends React.Component {
   constructor(props){
     super(props);
     this.handleLike = this.handleLike.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
 
   componentWillMount(){
@@ -46,6 +47,11 @@ class ImageItems extends React.Component {
     }
   }
 
+  handleBack(e){
+    e.preventDefault();
+    this.props.history.goBack();
+  }
+
 
   render (){
     console.log(this.props);
@@ -74,8 +80,29 @@ class ImageItems extends React.Component {
       likeButton = null;
     }
 
+    let editcog;
+    if (this.props.image.author_id === this.props.currentUser.id){
+      editcog = (
+        <Link
+          className="image-item-edit"
+          to={`/images/${this.props.imageId}/update`}
+          >
+          <i className="fas fa-cog image-item-cog"></i>
+        </Link>
+      );
+    } else {
+      editcog = (
+        <div></div>
+      );
+    }
+
     return (
       <div>
+        <div>
+          <button className="back-button-box" onClick={this.handleBack}>
+            <i className="fas fa-times back-button-icon"></i>
+          </button>
+        </div>
         <div className="image-item-image-container">
           <img className="image-item"src={this.props.image.image_url}/>
         </div>
@@ -94,12 +121,7 @@ class ImageItems extends React.Component {
 
         <div className="image-item-right-container">
           <div className="image-item-edit-like-container">
-            <Link
-              className="image-item-edit"
-              to={`/images/${this.props.imageId}/update`}
-              >
-              <i className="fas fa-cog image-item-cog"></i>
-            </Link>
+              {editcog}
 
             <div>
               {likeButton}

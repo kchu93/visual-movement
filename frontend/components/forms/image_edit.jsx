@@ -13,6 +13,7 @@ class ImageEdit extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateDescription = this.updateDescription.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
 
   componentWillMount(){
@@ -37,6 +38,10 @@ class ImageEdit extends React.Component {
     this.props.deleteImage(this.props.imageId).then(() => this.props.history.push(`/users/${this.props.currentUser.id}`));
   }
 
+  handleBack(e){
+    e.preventDefault();
+    this.props.history.goBack();
+  }
 
   render() {
     if (!this.props.image){
@@ -45,6 +50,10 @@ class ImageEdit extends React.Component {
 
     return (
       <div>
+
+        <button className="back-button-box" onClick={this.handleBack}>
+          <i className="fas fa-times back-button-icon"></i>
+        </button>
 
         <div className="image-item-image-container">
           <img className="image-item"src={this.props.image.image_url}/>

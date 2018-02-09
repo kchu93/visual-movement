@@ -11,6 +11,7 @@ class Search extends React.Component {
     };
     this.update = this.update.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
 
   componentWillMount(){
@@ -32,6 +33,11 @@ class Search extends React.Component {
       this.props.fetchSearchResults(e.target.value);
       }
     }
+  }
+
+  handleBack(e){
+    e.preventDefault();
+    this.props.history.push(`/feed`);
   }
 
 
@@ -62,6 +68,12 @@ class Search extends React.Component {
     return (
 
     <div className="search-input-container">
+      <div>
+        <button className="back-button-box" onClick={this.handleBack}>
+          <i className="fas fa-times back-button-icon"></i>
+        </button>
+      </div>
+
         <div className="search-input-box-container">
             <input
               className="search-input-box"

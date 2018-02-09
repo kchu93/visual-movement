@@ -16,7 +16,9 @@ const mapStateToProps = (state, ownProps) => {
   imageId: ownProps.match.params.imageId,
   image: state.images[ownProps.match.params.imageId],
   images: Object.values(state.images),
-  user: user
+  user: user,
+  currentUser: state.session.currentUser,
+  imagearray: state.images.imagearray
   };
 };
 

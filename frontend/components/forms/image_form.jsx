@@ -17,6 +17,7 @@ class ImageForm extends React.Component {
     this.updateDescription = this.updateDescription.bind(this);
     this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleBack = this.handleBack.bind(this);
   }
 
   componentDidMount(){
@@ -66,16 +67,27 @@ class ImageForm extends React.Component {
     const formData = new FormData();
     formData.append("image[description]", this.state.description);
     formData.append("image[image]", this.state.imageFile);
-    this.props.createImage(formData, this.goBack);
+    this.props.createImage(formData, this.goBack).then(() => this.props.history.push(`users/${this.props.currentUser.id}`));
+  }
 
-    // .then(() => this.props.history.push(`users/${this.props.currentUser.id}`));
+  handleBack(e){
+    e.preventDefault();
+    this.props.history.push(`/feed`);
   }
 
 
   render() {
     console.log(this.props);
     return (
+      <div>
+        <div>
+          <button className="back-button-box" onClick={this.handleBack}>
+            <i className="fas fa-times back-button-icon"></i>
+          </button>
+        </div>
+
       <div className="image-form-main-container">
+
         <h1>Create Image</h1>
         {this.renderErrors()}
         <div className="image-form-upper">
@@ -113,6 +125,7 @@ class ImageForm extends React.Component {
         </div>
 
     </div>
+  </div>
     );
   }
 }
