@@ -11,7 +11,7 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 <br>
 <br>
 
-<div>
+<div align="left">
   <h1 font-weight="bold">Features</h1>
     <li> User Authentication with secure frontend and backend </li>
     <li> User photo upload using AWS + Paperclip </li>
