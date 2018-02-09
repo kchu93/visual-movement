@@ -9,8 +9,8 @@
 Visual Movement is a full-stack single-page application inspired by VSCO's creative platform. Visual Movement uses Rails/PostgreSQL backend with React.js and Redux on the frontend
 
 <br>
-##Features
 
+##Features
 - User Authentication with secure frontend and backend
 - User photo upload using AWS + Paperclip
 - User ability to follow and unfollow other profiles
