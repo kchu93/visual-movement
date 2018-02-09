@@ -6,9 +6,6 @@ json.images do
       json.image_url asset_path(image.image.url(:original))
     end
   end
-  json.imagearray do
-    json.array! @imagearray
-  end
 end
 
 

@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ActiveRecord::Base.transaction do
+
+User.destroy_all
+Image.destroy_all
 
 DemoAccount = User.create(username: "demoaccount", email: "demoaccount", password: "demopassword", profile_picture: "https://i.imgur.com/Lylq8wU.png", description: "Photographer from San Francisco")
 User.create(username: "kchu", email: "kchu", password: 123456, profile_picture: "https://i.imgur.com/DlxWDXz.jpg", description: "Photographer from San Francisco")
@@ -119,6 +123,27 @@ Image.create(image: open("https://i.imgur.com/KGSmS4A.jpg"), author_id: 5, descr
 Image.create(image: open("https://i.imgur.com/2lS3Mni.jpg"), author_id: 5, description: "Aime Leon Dore")
 
 
+Image.create(image: open("https://i.imgur.com/eOWSIPh.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/I1AoWTZ.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/WIzfvOM.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/nX43th9.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/u8FDGHF.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/zjjTpq7.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/5DtCuP6.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/Mm2thow.jpg"), author_id: 5, description: "Aime Leon Dore")
+
+Image.create(image: open("https://i.imgur.com/rcf0diq.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/SMZCukh.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/ALREI7e.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/gJhOWhT.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/tW8duI7.png"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/VepPfdK.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/NOmzqaW.png"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/CSFDop7.jpg"), author_id: 5, description: "Aime Leon Dore")
+Image.create(image: open("https://i.imgur.com/iV4fun5.jpg"), author_id: 5, description: "Aime Leon Dore")
+
+
+
 
 # Image Seed RF1
 Image.create(image: open("https://i.imgur.com/rZengWJ.jpg"), author_id: 4, description: "Kith")
@@ -139,9 +164,8 @@ Image.create(image: open("https://i.imgur.com/mgAfeb1.jpg"), author_id: 4, descr
 Image.create(image: open("https://i.imgur.com/yFwydxr.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/BONADxq.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/nGa0TgX.jpg"), author_id: 4, description: "Kith")
-Image.create(image: open("https://i.imgur.com/zN2n3tC.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/yT4cNdF.jpg"), author_id: 4, description: "Kith")
-Image.create(image: open("https://i.imgur.com/gz6cMo0.jpg"), author_id: 4, description: "Kith")
+
 
 # WINTER UPLOAD
 
@@ -149,7 +173,6 @@ Image.create(image: open("https://i.imgur.com/0bLAtOX.jpg"), author_id: 4, descr
 Image.create(image: open("https://i.imgur.com/9nmt93x.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/yNILUMd.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/3U6xCck.jpg"), author_id: 4, description: "Kith")
-
 Image.create(image: open("https://i.imgur.com/fpTqMG5.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/76BFE4U.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/zFahKOn.jpg"), author_id: 4, description: "Kith")
@@ -170,6 +193,31 @@ Image.create(image: open("https://i.imgur.com/oSio0fT.jpg"), author_id: 4, descr
 Image.create(image: open("https://i.imgur.com/hRO71Qj.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/zN2n3tC.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/yT4cNdF.jpg"), author_id: 4, description: "Kith")
-Image.create(image: open("https://i.imgur.com/gz6cMo0.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/waXE3gF.jpg"), author_id: 4, description: "Kith")
 Image.create(image: open("https://i.imgur.com/3vc1Ffq.jpg"), author_id: 4, description: "Kith")
+
+
+#Kith seed
+Image.create(image: open("https://i.imgur.com/dZ1obJ9.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/X4vnPMl.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/vTfyshy.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/Lpf3hSn.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/COJ3S4I.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/ClYkfMV.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/27sz3bG.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/gxa2amL.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/gBvgyIw.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/odJXg0i.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/D8E5mJz.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/8mEQswU.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/jeoY8mm.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/BjbJkGq.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/ndOPjOL.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/I5g88Oc.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/qLdFdK7.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/dMhWzFS.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/TdVtUUH.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/qzhyC4f.jpg"), author_id: 4, description: "Kith")
+Image.create(image: open("https://i.imgur.com/rpJ29O3.jpg"), author_id: 4, description: "Kith")
+
+end
