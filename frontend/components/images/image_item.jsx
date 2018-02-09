@@ -54,7 +54,6 @@ class ImageItems extends React.Component {
 
 
   render (){
-    console.log(this.props);
     if (!this.props.image|| !this.props.user){
       return null;
     }
