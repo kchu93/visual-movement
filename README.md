@@ -24,7 +24,6 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
     
 <div>
   <h1>User Feed</h1>
-  <br>
     <p>
       Block feed showing 4 individual images on each line with the user profile links underneath each. Feed generated based on users followed
     </p>
