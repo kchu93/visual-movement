@@ -34,12 +34,13 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 </div>
 
 <br>
-##Upload Photo
-
-Users can upload individual photos for their profile feed with and input for photo caption
-
-<div align="center">
-  <img src="./app/assets/images/uploadphoto.png"
+<div>
+  <h1>Upload Photo</h1>
+    <p>
+      Users can upload individual photos for their profile feed with and input for photo caption
+    </p>
+    <div align="center">
+    <img src="./app/assets/images/uploadphoto.png"
 </div>
 
 
