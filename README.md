@@ -2,26 +2,28 @@
   <img src="./app/assets/images/logo.png"
 </div>
 
-
+<div>
 [Visual Movement - Live Demo](https://visualmovement.herokuapp.com/#/)
-
+<br>
+<br>
 
 Visual Movement is a full-stack single-page application inspired by VSCO's creative platform. Visual Movement uses Rails/PostgreSQL backend with React.js and Redux on the frontend
-
+<br>
 <br>
 
-Features
-- User Authentication with secure frontend and backend
-- User photo upload using AWS + Paperclip
-- User ability to follow and unfollow other profiles
-- User ability to like and unlike photos
-- Feed page to display images
-- User search functionality
-
+<div>
+  <h1 font-weight="bold">Features</h1>
+    <li> User Authentication with secure frontend and backend </li>
+    <li> User photo upload using AWS + Paperclip </li>
+    <li> User ability to follow and unfollow other profiles </li>
+    <li> User ability to like and unlike photos </li>
+    <li> Feed page to display images </li>
+    <li> User search functionality </li>
+  <div>
 <br>
+
 ##User Feed
-
-Block feed showing 4 individual images on each line with the user profile links underneath each. Feed it generated based on users followed
+Block feed showing 4 individual images on each line with the user profile links underneath each. Feed generated based on users followed
 
 <div align="center">
   <img src="./app/assets/images/feedpage.png"
@@ -54,4 +56,5 @@ Users can upload individual photos for their profile feed with and input for pho
 - Users can like photos from this view
 <div align="center">
   <img src="./app/assets/images/singlephoto.png"
+</div>
 </div>
