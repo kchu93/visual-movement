@@ -74,11 +74,6 @@ class NavBar extends React.Component {
             <i className="fas fa-search nav-bar-icons"></i>
           </NavLink>
 
-          <NavLink
-            exact
-            to={`/users/${this.props.currentUser.id}/edit`}>
-            <i className="fas fa-user nav-bar-icons"></i>
-          </NavLink>
         </div>
         <div className="left-content">
           {display}

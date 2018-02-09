@@ -10,6 +10,7 @@ import ImageItemContainer from './images/image_item_container';
 import LikesTabContainer from './profile/likes_tab_container';
 import ImageForm from './forms/image_form_container';
 import ImageEdit from './forms/image_edit_container';
+import SearchContainer from './search/search_container';
 
 // import Footer from './footer/footer';
 import {
@@ -29,6 +30,7 @@ export default () => (
       <Route exact path="/users/:userId" component={ProfileContainer} />
       <Route path="/images/:imageId/update" component={ImageEdit} />
       <Route path="/images/:imageId" component={ImageItemContainer} />
+      <Route path="/search" component={SearchContainer} />
       <Route path="/upload" component={ImageForm} />
       <AuthRoute path="/login" component={LoginContainer} />
       <AuthRoute path="/signup" component={SignupContainer} />
