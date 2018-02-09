@@ -44,13 +44,14 @@ Visual Movement is a full-stack single-page application inspired by VSCO's creat
 
 
 <br>
-##User Profile
+<div>
+  <h1>User Profile</h1>
 
-- Users can view other profiles and see their images within a Masonry layout.
-- Current User can select to follow profile
-- Current User can view other user's liked photos
-<div align="center">
-  <img src="./app/assets/images/userprofile.png"
+  <li> Users can view other profiles and see their images within a Masonry layout.</li>
+  <li> Current User can select to follow profile </li>
+  <li> Current User can view other user's liked photos </li>
+  <div align="center">
+    <img src="./app/assets/images/userprofile.png"
 </div>
 
 <br>
