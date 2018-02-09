@@ -20,7 +20,7 @@ class ImageForm extends React.Component {
   }
 
   componentDidMount(){
-    this.props.clearErrors();
+    this.props.clearImageErrors();
   }
 
   updateDescription(e){
@@ -44,6 +44,7 @@ class ImageForm extends React.Component {
     );
   }
 
+
   updateFile(e){
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
@@ -65,7 +66,9 @@ class ImageForm extends React.Component {
     const formData = new FormData();
     formData.append("image[description]", this.state.description);
     formData.append("image[image]", this.state.imageFile);
-    ApiUtil.createImage(formData, this.goBack).then(() => this.props.history.push(`users/${this.props.currentUser.id}`));
+    this.props.createImage(formData, this.goBack);
+
+    // .then(() => this.props.history.push(`users/${this.props.currentUser.id}`));
   }
 
 

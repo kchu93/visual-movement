@@ -10,17 +10,38 @@
   padding-top: 40px;
 }
 
+.nav-bar-left-side {
+  display: flex;
+  justify-content: space-around;
+  width: 70px;
+  opacity: .90;
+  margin-top: 5px;
+  padding-left: 5px
+}
+
+.nav-bar-icons {
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-left: 12px;
+  opacity: .85;
+  &:hover {
+    color: $darkgold;
+  }
+}
+
 .nav-bar-left-side img {
   width: 12vw;
   text-align: left;
   vertical-align: middle;
-  margin-top: 5px;
 }
 
 .nav-bar-right-side {
   font-family: 'Lato';
   font-size: 12px;
-  text-align: left;
+}
+
+.nav-bar-right-side-session {
+  margin-top: 5px;
 }
 
 .logout-btn {
@@ -32,6 +53,8 @@
   background: none;
   border: .0525rem solid;
   border-radius: .125rem;
+  letter-spacing: 1px;
+  opacity: .85;
 
   &:hover {
     color: $darkgold;
@@ -47,13 +70,17 @@
   text-align: center;
   vertical-align: middle;
   margin-right: 20px;
+  letter-spacing: 1px;
+  opacity: .85;
+
 
   &:hover {
     color: $darkgold;
   }
 }
 
-.profile-tab-active{
+.nav-bar-active{
   font-weight: bolder;
-  color: $darkgold;
+  color: $black;
+  opacity: 1;
 }

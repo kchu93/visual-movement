@@ -19,7 +19,7 @@ class Api::ImagesController < ApplicationController
     if @image.save
       render :show
     else
-      render json: ["Please upload photo"], status: 401
+      render json: ["Please upload photo"], status: 422
     end
   end
 

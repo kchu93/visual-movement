@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
 
     get "users/:userId/likes", to:"users#likes"
+    get "searches/:query", to:"searches#index"
   end
 
   root "static_pages#root"

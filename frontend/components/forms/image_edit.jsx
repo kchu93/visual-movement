@@ -34,13 +34,11 @@ class ImageEdit extends React.Component {
 
   handleDelete(e){
     e.preventDefault();
-    this.props.deleteImage(this.props.imageId).then(() => this.props.history.push(`/users/${this.props.currentUser.id}`))
+    this.props.deleteImage(this.props.imageId).then(() => this.props.history.push(`/users/${this.props.currentUser.id}`));
   }
 
 
   render() {
-    console.log(this.props);
-
     if (!this.props.image){
       return null;
     }
@@ -52,23 +50,24 @@ class ImageEdit extends React.Component {
           <img className="image-item"src={this.props.image.image_url}/>
         </div>
 
+        <div className="image-item-edit-left-side">
+            <input
+              className="image-item-edit-description"
+              type="text"
+              placeholder="Update description"
+              value={this.state.description}
+              onChange={this.updateDescription('description')}
+            />
+        </div>
+
         <div className="image-item-edit-container">
-          <div className="image-item-edit-left-side">
-              <input
-                className="image-item-edit-description"
-                type="text"
-                placeholder={this.props.image.description}
-                value={this.state.description}
-                onChange={this.updateDescription('description')}
-              />
-          </div>
 
           <div className="image-item-right-side">
             <div className="image-item-edit-submit-container">
               <button
                 className="image-item-edit-submit"
                 onClick={this.handleSubmit}>
-                Update Image
+                <i class="fas fa-wrench"></i>
               </button>
             </div>
 
@@ -76,7 +75,7 @@ class ImageEdit extends React.Component {
               <button
                 className="image-item-edit-delete"
                 onClick={this.handleDelete}>
-                Delete Image
+                <i class="far fa-trash-alt"></i>
               </button>
             </div>
 

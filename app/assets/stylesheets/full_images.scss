@@ -25,7 +25,7 @@
 
 .image-item-right-container {
   text-align: right;
-  padding: 20px;
+  padding: 18px;
 }
 
 .image-item-description {
@@ -48,6 +48,12 @@
 }
 
 
+.image-item-edit-like-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 .image-item-like-button {
   font-family: 'Lato';
   box-sizing: border-box;
@@ -58,6 +64,11 @@
   border: 1px solid $darkgold;
   color: $darkgold;
   letter-spacing: 1px;
+
+  &:hover{
+    border: 1px solid #888;
+    color: #888;
+  }
 }
 
 
@@ -71,9 +82,23 @@
   border: 1px solid #888;
   color: #888;
   letter-spacing: 1px;
+
+  &:hover{
+    border: 1px solid $darkgold;
+    color: $darkgold;
+  }
 }
 
+.image-item-cog {
+  color: #888;
+  margin-top: 3.5px;
+  margin-right: 10px;
+  font-size: 13px;
 
+  &:hover {
+    color: $darkgold;
+  }
+}
 
 
 
@@ -86,8 +111,19 @@
 }
 
 .image-item-edit-left-side {
-  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px
 }
+
+.image-item-edit-description {
+  align-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 15px;
+  border:none;
+}
+
 
 .image-item-right-side {
   display: flex;
@@ -96,53 +132,40 @@
 
 .image-item-edit-submit-container{
   text-align: center;
-  padding-left: 20px;
 }
 
-.image-item-edit-delete-container {
-  width: 200px;
-  text-align: right;
-  margin-left: 200px
-}
-
-
-
-.image-item-edit-description {
-  align-content: center;
-  text-align: center;
-  height: 20px;
-  width: 120px;
-}
 
 .image-item-edit-submit {
-  text-align: center;
   font-family: 'Lato';
-  box-sizing: border-box;
+  border: none;
   height: auto;
-  font-size: 12px;
+  font-size: 16px;
   background: none;
-  border-radius: .125rem;
-  border: 1px solid #888;
   color: #888;
   letter-spacing: 1px;
   height: 26px;
-  width: 120px;
+  width: 75px;
   text-align: center;
+
+  &:hover {
+    color: $darkgold;
+  }
 }
 
 
 .image-item-edit-delete {
-  text-align: center;
   font-family: 'Lato';
-  box-sizing: border-box;
+  border: none;
   height: auto;
-  font-size: 12px;
+  font-size: 16px;
   background: none;
-  border-radius: .125rem;
-  border: 1px solid $errorred;
-  color: $errorred;
+  color: #888;
   letter-spacing: 1px;
   height: 26px;
-  width: 110px;
+  width: 75px;
   text-align: center;
+
+  &:hover {
+    color: $errorred;
+  }
 }

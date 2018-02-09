@@ -7,7 +7,8 @@ class Signup extends React.Component {
     this.state = {
       username: "",
       email: "",
-      password: ""
+      password: "",
+      profile_picture: "https://i.imgur.com/Lylq8wU.png",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

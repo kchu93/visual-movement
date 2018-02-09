@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Masonry from 'react-masonry-component';
 
 
 
@@ -92,9 +93,19 @@ class ImageItems extends React.Component {
           </div>
 
         <div className="image-item-right-container">
-          <div>
-            {likeButton}
+          <div className="image-item-edit-like-container">
+            <Link
+              className="image-item-edit"
+              to={`/images/${this.props.imageId}/update`}
+              >
+              <i className="fas fa-cog image-item-cog"></i>
+            </Link>
+
+            <div>
+              {likeButton}
+            </div>
           </div>
+
           <p className="image-item-text">
             {this.dateConversion()}
           </p>

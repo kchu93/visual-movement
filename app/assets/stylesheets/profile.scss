@@ -16,6 +16,7 @@
   display: block;
   text-align: center;
   align-items: center;
+  letter-spacing: 2px;
 }
 
 
@@ -84,7 +85,8 @@
   margin-top: 10px;
   padding: 25px;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  opacity: .80
 }
 
 .profile-images {
@@ -97,4 +99,10 @@
 .profile-images img {
   width: 18vw;
   height: auto;
+}
+
+.profile-tab-active {
+  color: $black;
+  font-weight: bolder;
+  opacity: 1;
 }

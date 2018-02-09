@@ -10,7 +10,7 @@ class NavBar extends React.Component {
   }
 
   handleClick(){
-    this.props.logout().then(() => this.props.history.push('/'));
+    this.props.logout().then(this.props.history.push('/'));
   }
 
 
@@ -19,23 +19,26 @@ class NavBar extends React.Component {
       <div className="nav-bar-right-side">
 
         <NavLink
+          exact
           to="/feed"
           className="nav-bar-links"
-          activeClassName="profile-tab-active">
+          activeClassName="nav-bar-active">
           Feed
         </NavLink>
 
         <NavLink
+          exact
           to="/upload"
           className="nav-bar-links"
-          activeClassName="profile-tab-active">
+          activeClassName="nav-bar-active">
           Upload
         </NavLink>
 
         <NavLink
+          exact
           to={`/users/${this.props.currentUser.id}`}
           className="nav-bar-links"
-          activeClassName="profile-tab-active">
+          activeClassName="nav-bar-active">
           {this.props.currentUser.username}
         </NavLink>
 
@@ -43,16 +46,39 @@ class NavBar extends React.Component {
 
       </div>
     ) : (
-      <div className="nav-bar-right-side">
-        <Link className="nav-bar-links" to="/signup">Sign Up</Link>
-        <Link className="nav-bar-links" to="/login">Sign In</Link>
+      <div className="nav-bar-right-side-session">
+        <NavLink
+          exact
+          className="nav-bar-links"
+          activeClassName="nav-bar-active"
+          to="/signup">
+          Sign Up
+        </NavLink>
+
+        <NavLink
+          exact
+          className="nav-bar-links"
+          activeClassName="nav-bar-active"
+          to="/login">
+          Sign In
+        </NavLink>
       </div>
     );
 
     return (
       <div className="nav-bar">
         <div className="nav-bar-left-side">
-          <Link to="/"><img src="https://i.imgur.com/P4gUDii.png"></img></Link>
+          <NavLink
+            exact
+            to="/search">
+            <i className="fas fa-search nav-bar-icons"></i>
+          </NavLink>
+
+          <NavLink
+            exact
+            to={`/users/${this.props.currentUser.id}/edit`}>
+            <i className="fas fa-user nav-bar-icons"></i>
+          </NavLink>
         </div>
         <div className="left-content">
           {display}

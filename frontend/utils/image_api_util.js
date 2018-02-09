@@ -9,7 +9,7 @@ export const fetchImages = () => (
 
 
 export const createImage = (formData, callback) => (
-  $.ajax({
+    $.ajax({
     method: 'POST',
     url: '/api/images',
     processData: false,

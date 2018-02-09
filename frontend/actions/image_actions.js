@@ -30,6 +30,12 @@ const receiveImageErrors = errors => ({
   errors
 });
 
+export const clearImageErrors =  () => dispatch => (
+   dispatch(receiveImageErrors([]))
+);
+
+
+
 
 export const fetchImages = () => dispatch => (
   APIUtil.fetchImages().then(images => dispatch(receiveImages(images)), err => (dispatch(receiveImageErrors(err.responseJSON))
@@ -43,10 +49,11 @@ export const fetchImage = formImage => dispatch => (
 );
 
 
-export const createImage = formImage => dispatch => (
-  APIUtil.createImage(formImage).then(image => dispatch(receiveImage(image)), err => (dispatch(receiveImageErrors(err.responseJSON))
+export const createImage = (formImage, callback) => dispatch => (
+  APIUtil.createImage(formImage, callback).then(image => dispatch(receiveImage(image)), err => (dispatch(receiveImageErrors(err.responseJSON))
   ))
 );
+
 
 
 export const updateImage = formImage => dispatch => (

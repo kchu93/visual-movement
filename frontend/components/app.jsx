@@ -26,7 +26,7 @@ export default () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/users/:userId/likes" component={LikesTabContainer} />
-      <ProtectedRoute path="/users/:userId" component={ProfileContainer} />
+      <Route exact path="/users/:userId" component={ProfileContainer} />
       <Route path="/images/:imageId/update" component={ImageEdit} />
       <Route path="/images/:imageId" component={ImageItemContainer} />
       <Route path="/upload" component={ImageForm} />
