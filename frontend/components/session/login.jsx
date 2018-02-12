@@ -76,10 +76,8 @@ class Login extends React.Component {
           </label>
           <br/>
           <br/>
-          <div className="login-btn-container">
             <input className="login-btn" type="submit" value="Sign In" />
             <button className="demo-btn" onClick={this.loginDemo}>Demo</button>
-          </div>
         </form>
       </div>
     );

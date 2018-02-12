@@ -11,6 +11,7 @@ class Signup extends React.Component {
       profile_picture: "https://i.imgur.com/Lylq8wU.png",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemo = this.loginDemo.bind(this);
   }
 
   componentDidMount(){
@@ -26,6 +27,12 @@ class Signup extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.createNewUser(this.state).then(() => this.props.history.push("/"));
+  }
+
+  loginDemo(e) {
+    e.preventDefault();
+    const demoAccount = {username:"demoaccount", password:"demopassword"};
+    this.props.login(demoAccount);
   }
 
   renderErrors() {
@@ -80,7 +87,11 @@ class Signup extends React.Component {
               />
           </label>
           <br/>
-          <input className="signin-btn" type="submit" value="Sign Up" />
+          <div className="signup-btn-container">
+            <input className="signin-btn" type="submit" value="Sign Up" />
+
+            <button className="demo-btn" onClick={this.loginDemo}>Demo</button>
+          </div>
         </form>
       </div>
     );
