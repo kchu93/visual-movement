@@ -12,7 +12,7 @@
 
 .nav-bar-left-side {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 70px;
   opacity: .90;
   margin-top: 5px;
@@ -30,8 +30,10 @@
 }
 
 .nav-bar-left-side img {
-  width: 12vw;
+  width: 3.5vw;
+  margin-left: 5px;
   text-align: left;
+  opacity: .98;
   vertical-align: middle;
 }
 

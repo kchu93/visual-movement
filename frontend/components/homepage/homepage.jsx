@@ -12,18 +12,6 @@ class Homepage extends React.Component {
             </div>
           </a>
         </div>
-
-        <div className="section2">
-          <a href="/#/login">
-            <div className="section2-link"></div>
-          </a>
-        </div>
-
-        <div className="section3">
-          <a href="/#/login">
-            <div className="section3-link"></div>
-          </a>
-        </div>
       </div>
     );
   }

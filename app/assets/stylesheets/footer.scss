@@ -1,1 +1,8 @@
+@import 'variables';
 
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  color: $black;
+  height: 60px;
+}

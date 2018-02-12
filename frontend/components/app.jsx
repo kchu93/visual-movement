@@ -11,8 +11,7 @@ import LikesTabContainer from './profile/likes_tab_container';
 import ImageForm from './forms/image_form_container';
 import ImageEdit from './forms/image_edit_container';
 import SearchContainer from './search/search_container';
-
-// import Footer from './footer/footer';
+import Footer from './footer/footer';
 import {
   Route,
   Link,
