@@ -37,7 +37,7 @@ class Search extends React.Component {
 
   handleBack(e){
     e.preventDefault();
-    this.props.history.push(`/feed`);
+    this.props.history.push(`/explore`);
   }
 
 

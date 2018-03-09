@@ -4,7 +4,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import HomePage from './homepage/homepage';
-import FeedContainer from './feed/feed_container';
+import ExploreContainer from './explore/explore_container';
 import ProfileContainer from './profile/profile_container';
 import ImageItemContainer from './images/image_item_container';
 import LikesTabContainer from './profile/likes_tab_container';
@@ -33,7 +33,7 @@ export default () => (
       <Route path="/upload" component={ImageForm} />
       <AuthRoute path="/login" component={LoginContainer} />
       <AuthRoute path="/signup" component={SignupContainer} />
-      <ProtectedRoute path="/feed" component={FeedContainer} />
+      <ProtectedRoute path="/explore" component={ExploreContainer} />
     </Switch>
   </div>
 );

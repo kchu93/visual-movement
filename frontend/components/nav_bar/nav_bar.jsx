@@ -20,10 +20,10 @@ class NavBar extends React.Component {
 
         <NavLink
           exact
-          to="/feed"
+          to="/explore"
           className="nav-bar-links"
           activeClassName="nav-bar-active">
-          Feed
+          Explore
         </NavLink>
 
         <NavLink
