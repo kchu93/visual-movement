@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     user: state.users[ownProps.match.params.userId],
     images: Object.values(state.images),
     follows: state.follows.follows,
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    following_images: Object.values(state.following_images)
   };
 };
 

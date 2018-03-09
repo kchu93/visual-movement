@@ -8,7 +8,6 @@ import {
 
 export const followingReducer = (state = {}, action) => {
   Object.freeze(state);
-
   switch(action.type){
 
     case RECEIVE_USER:

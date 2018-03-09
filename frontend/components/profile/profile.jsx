@@ -6,6 +6,9 @@ import { ProfileTabs } from './profile_tabs';
 class Profile extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      following_images: ""
+    };
     this.handleFollow = this.handleFollow.bind(this);
   }
 

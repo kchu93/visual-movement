@@ -11,6 +11,7 @@ import LikesTabContainer from './profile/likes_tab_container';
 import ImageForm from './forms/image_form_container';
 import ImageEdit from './forms/image_edit_container';
 import SearchContainer from './search/search_container';
+import FeedContainer from './feed/feed_container';
 import Footer from './footer/footer';
 import {
   Route,
@@ -34,6 +35,7 @@ export default () => (
       <AuthRoute path="/login" component={LoginContainer} />
       <AuthRoute path="/signup" component={SignupContainer} />
       <ProtectedRoute path="/explore" component={ExploreContainer} />
+      <ProtectedRoute path="/feed" component={FeedContainer} />
     </Switch>
   </div>
 );

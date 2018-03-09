@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import Feed from './feed';
 
 const mapStateToProps = state => ({
-  user: state.session.currentUser
+  currentUser: state.session.currentUser,
+  following_images: Object.values(state.following_images)
 });
 
 const mapDispatchToProps = dispatch => ({

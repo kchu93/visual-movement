@@ -28,6 +28,14 @@ class NavBar extends React.Component {
 
         <NavLink
           exact
+          to="/feed"
+          className="nav-bar-links"
+          activeClassName="nav-bar-active">
+          Feed
+        </NavLink>
+
+        <NavLink
+          exact
           to="/upload"
           className="nav-bar-links"
           activeClassName="nav-bar-active">
