@@ -5,6 +5,7 @@ import { userReducer } from './user_reducer';
 import { followReducer } from './follow_reducer';
 import { likeReducer } from './like_reducer';
 import { searchReducer } from './search_reducer';
+import { followingReducer } from './following_reducer';
 import errorsReducer from './errors_reducers';
 
 export default combineReducers({
@@ -14,5 +15,6 @@ export default combineReducers({
   follows: followReducer,
   likes: likeReducer,
   search: searchReducer,
+  following_images: followingReducer,
   errors: errorsReducer
 });

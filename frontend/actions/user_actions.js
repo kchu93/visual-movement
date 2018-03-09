@@ -4,12 +4,13 @@ export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_USER_ERRORS = "RECEIVE_USER_ERRORS";
 
 
-export const receiveUser = ({ user, images, follows, likes }) => {
+export const receiveUser = ({ user, images, follows, following_images, likes }) => {
   return ({
     type: RECEIVE_USER,
     user,
     images,
     follows,
+    following_images,
     likes
   });
 };
