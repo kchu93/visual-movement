@@ -23,6 +23,8 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = selected_user
+    @user_followings = @user.users_i_follow
+    @user_followings_images = @user_followings.map {|following| following.images}
 
     @followees = @user.users_i_follow_ids
     if @user

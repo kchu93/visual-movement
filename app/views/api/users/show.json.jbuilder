@@ -11,6 +11,17 @@ json.images do
   end
 end
 
+
+json.following_images do
+  @user_followings_images.each do |following_images|
+    following_images.each do |image|
+      json.set! image.id do
+        json.extract! image, :id, :image
+      end
+    end
+  end
+end
+
 json.follows @user.followers.any? {|follower| follower.id == current_user.id}
 
 json.likes do
