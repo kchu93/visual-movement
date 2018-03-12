@@ -14,7 +14,9 @@ class Footer extends React.Component {
           </a>
         </div>
 
-        <h2 className="created-by-tag">Created by Kevin Chu</h2>
+        <div className="footer-name-container">
+        <h2 className="created-by-text">Created by<h2 className="created-by-text-name">Kevin Chu</h2></h2>
+        </div>
       </div>
     );
   }
