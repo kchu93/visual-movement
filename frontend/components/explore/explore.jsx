@@ -29,7 +29,7 @@ class Explore extends React.Component {
     let users = this.props.users;
     let images = this.shuffleImages(this.props.images);
     return (
-      <div>
+      <div className="Feed">
         <h1 className="feed-header"></h1>
         <ul className="feed-container">
           {

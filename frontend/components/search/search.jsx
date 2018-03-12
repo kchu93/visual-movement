@@ -82,7 +82,7 @@ class Search extends React.Component {
             <input
               className="search-input-box"
               type="text"
-              placeholder="Update description"
+              placeholder="Search"
               value={this.state.query}
               onChange={this.update}
               onKeyPress={this.handleKeyPress}

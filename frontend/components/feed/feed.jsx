@@ -14,7 +14,7 @@ class Feed extends React.Component {
   render (){
 
     return (
-      <div>
+      <div className="Feed">
         <h1 className="feed-header"></h1>
         <ul className="feed-container">
           {

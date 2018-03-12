@@ -6,12 +6,14 @@ class Homepage extends React.Component {
   render () {
     return (
       <div className="Homepage">
+
         <div className="section1">
           <a href="/#/signup">
             <div className="section1-link">
               <img className="left-side-image" src="https://i.imgur.com/vXydIFI.png"/>
             </div>
           </a>
+        </div>
 
           <div className="section2">
             <a href="/#/signup">
@@ -20,7 +22,7 @@ class Homepage extends React.Component {
               </div>
             </a>
           </div>
-        </div>
+
       </div>
     );
   }

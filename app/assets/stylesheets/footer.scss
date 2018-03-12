@@ -1,8 +1,31 @@
 @import 'variables';
 
 .footer {
+  text-align: center;
+  background: $white;
+  height: 100%;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+.footer-icons {
   display: flex;
-  justify-content: flex-start;
-  color: $black;
-  height: 60px;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-icons a{
+  padding: 10px;
+  font-size: 25px;
+  &:hover {
+    color: $darkgold;
+  }
+}
+
+.created-by-tag {
+  font-size: 12px;
 }

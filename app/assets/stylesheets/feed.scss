@@ -1,5 +1,13 @@
 @import "variables";
 
+.Feed{
+  animation: fadeinleft 2.5s ease-in;
+}
+
+@keyframes fadeinleft {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 .feed-container {
   padding-left: 4%;
@@ -16,6 +24,7 @@
 .feed-images img{
   width: 18vw;
   height: auto;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
 .username {

@@ -37,5 +37,6 @@ export default () => (
       <ProtectedRoute path="/explore" component={ExploreContainer} />
       <ProtectedRoute path="/feed" component={FeedContainer} />
     </Switch>
+    <Route  exact path="/" component={Footer}/>
   </div>
 );
