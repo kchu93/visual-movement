@@ -21,7 +21,11 @@ class Search extends React.Component {
   update(e){
     e.preventDefault();
     this.setState({query: e.currentTarget.value});
-    this.props.fetchSearchResults(e.currentTarget.value);
+    if (e.target.value.length === 0) {
+      this.props.fetchSearchResults();
+    } else {
+      this.props.fetchSearchResults(e.currentTarget.value);
+    }
   }
 
 
