@@ -29,7 +29,7 @@ class ImageItems extends React.Component {
     let locale = "en-us";
 
     let month = timestamp.toLocaleString(locale, { month: "long" });
-    let day = timestamp.getDay();
+    let day = timestamp.getDate();
     let year = timestamp.getFullYear();
 
     let fulldate = month + " " + day + ", " + year;
