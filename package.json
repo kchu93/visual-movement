@@ -28,7 +28,9 @@
     "node": "6.10.1",
     "npm": "3.10.10"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.0.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
